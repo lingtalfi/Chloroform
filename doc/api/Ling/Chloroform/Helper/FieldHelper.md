@@ -56,4 +56,4 @@ Ling\Chloroform\Helper\FieldHelper
 
 SeeAlso
 ==============
-Previous class: [WarningFormNotification](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/FormNotification/WarningFormNotification.md)<br>Next class: [AbstractMinMaxValidator](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/AbstractMinMaxValidator.md)<br>
+Previous class: [WarningFormNotification](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/FormNotification/WarningFormNotification.md)<br>Next class: [ChloroformRendererInterface](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Renderer/ChloroformRendererInterface.md)<br>

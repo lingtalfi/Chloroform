@@ -596,6 +596,10 @@ So, come back in a few weeks for that.
 History Log
 =============
 
+- 1.2.0 -- 2019-04-15
+
+    - add ChloroformRendererInterface 
+    
 - 1.1.0 -- 2019-04-15
 
     - add validators in the toArray array, so that renderers get a chance to add js validation 
