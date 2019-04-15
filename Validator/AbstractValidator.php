@@ -157,23 +157,48 @@ abstract class AbstractValidator implements ValidatorInterface
     /**
      * Returns an array of the lines of the error messages file for this validator.
      *
-     * Each line of the message file is formatted using the following format:
+     *
+     * The returned array structure depends on the $identifierAsKey argument.
+     *
+     * If false, each entry of the array is a line of the messages file.
+     * Note: in the messages file, a line looks like this:
+     *
      *
      * ```txt
      * $identifier: $message
      * ```
      *
+     *
+     * If true, each entry of the array is actually a pair of key/value, where the
+     * key is the identifier, and the value is the message.
+     *
+     *
+     *
+     *
+     * @param bool $identifierAsKey = false
      * @return array
      * @throws ChloroformException
      */
-    protected function getMessages(): array
+    protected function getMessages(bool $identifierAsKey = false): array
     {
         $validatorName = ClassTool::getShortName($this);
         $messagesFile = $this->messagesDir . "/$validatorName.txt";
         if (file_exists($messagesFile)) {
-            return file($messagesFile, FILE_SKIP_EMPTY_LINES | FILE_IGNORE_NEW_LINES);
+            $lines = file($messagesFile, FILE_SKIP_EMPTY_LINES | FILE_IGNORE_NEW_LINES);
+            if (false === $identifierAsKey) {
+                return $lines;
+            } else {
+                $ret = [];
+                foreach ($lines as $line) {
+                    $p = explode(":", $line, 2);
+                    $ret[$p[0]] = trim($p[1]);
+                }
+                return $ret;
+            }
         } else {
             throw new ChloroformException("Message file not found: $messagesFile");
         }
     }
+
+
 }

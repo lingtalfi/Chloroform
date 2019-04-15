@@ -16,18 +16,27 @@ Description
 ================
 
 
-protected [AbstractValidator::getMessages](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/AbstractValidator/getMessages.md)() : array
+protected [AbstractValidator::getMessages](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/AbstractValidator/getMessages.md)(bool $identifierAsKey = false) : array
 
 
 
 
 Returns an array of the lines of the error messages file for this validator.
 
-Each line of the message file is formatted using the following format:
+
+The returned array structure depends on the $identifierAsKey argument.
+
+If false, each entry of the array is a line of the messages file.
+Note: in the messages file, a line looks like this:
+
 
 ```txt
 $identifier: $message
 ```
+
+
+If true, each entry of the array is actually a pair of key/value, where the
+key is the identifier, and the value is the message.
 
 
 
@@ -35,7 +44,10 @@ $identifier: $message
 Parameters
 ================
 
-This method has no parameters.
+
+- identifierAsKey
+
+    
 
 
 Return values

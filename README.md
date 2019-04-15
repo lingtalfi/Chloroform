@@ -596,6 +596,10 @@ So, come back in a few weeks for that.
 History Log
 =============
 
+- 1.3.0 -- 2019-04-15
+
+    - add PasswordValidator 
+    
 - 1.2.0 -- 2019-04-15
 
     - add ChloroformRendererInterface 
