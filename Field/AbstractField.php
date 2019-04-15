@@ -232,6 +232,12 @@ abstract class AbstractField implements FieldInterface
      */
     public function toArray(): array
     {
+
+        $validators = [];
+        foreach ($this->validators as $validator) {
+            $validators[] = $validator->toArray();
+        }
+
         return array_merge($this->properties, [
             "id" => $this->id,
             "label" => $this->label,
@@ -241,6 +247,7 @@ abstract class AbstractField implements FieldInterface
             "htmlName" => FieldHelper::getHtmlNameById($this->id, $this->valueIsScalar),
             "errors" => $this->errors,
             "className" => get_called_class(),
+            "validators" => $validators,
         ]);
     }
 

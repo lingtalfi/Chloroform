@@ -76,4 +76,16 @@ class FileMimeTypeValidator extends AbstractValidator
         }
         return true;
     }
+
+
+
+    /**
+     * @overrides
+     */
+    public function toArray(): array
+    {
+        return array_merge(parent::toArray(), [
+            "allowed_mime_types" => $this->allowedMimeTypes,
+        ]);
+    }
 }
