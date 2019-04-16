@@ -167,7 +167,7 @@ class PasswordValidator extends AbstractValidator
 
 
             if ($failures) {
-                $intro = $messages['_main'];
+                $intro = str_replace('{fieldName}', $fieldName, $messages['_main']);
                 /**
                  * assuming that all languages will have the intro part on the left...
                  */

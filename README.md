@@ -596,6 +596,10 @@ So, come back in a few weeks for that.
 History Log
 =============
 
+- 1.4.1 -- 2019-04-16
+
+    - fix PasswordValidator not resolving tag {fieldName}   
+    
 - 1.4.0 -- 2019-04-16
 
     - add rows property for the TextField   
