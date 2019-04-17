@@ -596,6 +596,10 @@ So, come back in a few weeks for that.
 History Log
 =============
 
+- 1.5.0 -- 2019-04-17
+
+    - update htmlName in AbstractField, now does never has the trailing brackets [] 
+    
 - 1.4.2 -- 2019-04-17
 
     - fix Chloroform->injectValues re-injecting null by default for all fields 

@@ -28,7 +28,7 @@ class <span class="pl-k">FieldHelper</span>  {
     - public static [getDefaultIdByLabel](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Helper/FieldHelper/getDefaultIdByLabel.md)(string $label) : string
     - public static [getDefaultErrorNameByLabelOrId](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Helper/FieldHelper/getDefaultErrorNameByLabelOrId.md)(string $label = null, string $id = null) : string
     - public static [getFieldValue](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Helper/FieldHelper/getFieldValue.md)(string $fieldId, array $values) : mixed | null
-    - public static [getHtmlNameById](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Helper/FieldHelper/getHtmlNameById.md)(string $fieldId, bool $isScalar = true) : string
+    - public static [getHtmlNameById](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Helper/FieldHelper/getHtmlNameById.md)(string $fieldId) : string
 
 }
 

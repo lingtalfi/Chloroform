@@ -87,11 +87,6 @@ class SelectField extends AbstractField
      */
     public function toArray(): array
     {
-        $multiple = $this->properties["multiple"] ?? false;
-        if (true === $multiple) {
-            $this->setValueIsScalar(false);
-        }
-
         return array_merge(parent::toArray(), [
             "items" => $this->items,
         ]);

@@ -8,7 +8,6 @@ use Ling\Bat\BDotTool;
 use Ling\Chloroform\Exception\ChloroformException;
 use Ling\Chloroform\Field\FieldInterface;
 use Ling\Chloroform\Field\FormAwareFieldInterface;
-use Ling\Chloroform\Field\PostedDataAwareFieldInterface;
 use Ling\Chloroform\FormNotification\FormNotificationInterface;
 use Ling\Chloroform\Validator\ValidatorInterface;
 use Ling\PhpUploadFileFix\PhpUploadFileFixTool;
