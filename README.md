@@ -596,6 +596,11 @@ So, come back in a few weeks for that.
 History Log
 =============
 
+- 1.4.2 -- 2019-04-17
+
+    - fix Chloroform->injectValues re-injecting null by default for all fields 
+    - fix PasswordValidator not working (didn't test it when committed) 
+    
 - 1.4.1 -- 2019-04-16
 
     - fix PasswordValidator not resolving tag {fieldName}   

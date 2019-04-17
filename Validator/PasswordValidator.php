@@ -140,29 +140,27 @@ class PasswordValidator extends AbstractValidator
 
         if (is_string($value)) {
 
-
             // https://stackoverflow.com/questions/9438158/split-utf8-string-into-array-of-chars
             $chars = preg_split('//u', $value, null, PREG_SPLIT_NO_EMPTY);
             $info = $this->count($chars);
             $messages = $this->getMessages(true);
-
 
             $failures = [];
 
             if (null !== $this->nbAlpha && $info["alpha"] < $this->nbAlpha) {
                 $failures[] = str_replace('{alpha}', $this->nbAlpha, $messages['_alpha']);
             }
-            if (null !== $this->nbAlphaLower && $info["alphaLower"] < $this->nbAlpha) {
-                $failures[] = str_replace('{alphaLower}', $this->nbAlpha, $messages['_alpha_lower']);
+            if (null !== $this->nbAlphaLower && $info["alphaLower"] < $this->nbAlphaLower) {
+                $failures[] = str_replace('{alphaLower}', $this->nbAlphaLower, $messages['_alpha_lower']);
             }
-            if (null !== $this->nbAlphaLower && $info["alphaUpper"] < $this->nbAlpha) {
-                $failures[] = str_replace('{alphaUpper}', $this->nbAlpha, $messages['_alpha_upper']);
+            if (null !== $this->nbAlphaUpper && $info["alphaUpper"] < $this->nbAlphaUpper) {
+                $failures[] = str_replace('{alphaUpper}', $this->nbAlphaUpper, $messages['_alpha_upper']);
             }
-            if (null !== $this->nbAlphaLower && $info["digit"] < $this->nbAlpha) {
-                $failures[] = str_replace('{digit}', $this->nbAlpha, $messages['_digit']);
+            if (null !== $this->nbDigits && $info["digit"] < $this->nbDigits) {
+                $failures[] = str_replace('{digit}', $this->nbDigits, $messages['_digit']);
             }
-            if (null !== $this->nbAlphaLower && $info["special"] < $this->nbAlpha) {
-                $failures[] = str_replace('{special}', $this->nbAlpha, $messages['_special']);
+            if (null !== $this->nbSpecial && $info["special"] < $this->nbSpecial) {
+                $failures[] = str_replace('{special}', $this->nbSpecial, $messages['_special']);
             }
 
 
@@ -176,7 +174,7 @@ class PasswordValidator extends AbstractValidator
                 } else {
                     $last = array_pop($failures);
                     $and = $messages['_and'];
-                    $error = $intro . implode(", ", $failures) . " " . $and . " " . $last;
+                    $error = $intro . " " .  implode(", ", $failures) . " " . $and . " " . $last;
                 }
                 return false;
             }
