@@ -569,6 +569,7 @@ The available validators
 - MinMaxFileSizeValidator: check that the file size of the posted file is within the defined boundaries (works with FileField).
 - FileMimeTypeValidator: check that the file mime type is allowed (works with FileField).
 - RequiredValidator: check that the string version of the value is not the empty string (works with all fields).
+- RequiredDateValidator: check that the date is not empty (0000-00-00 or empty string).
 - PasswordConfirmValidator: check that the password matches the value of a password confirm field (works with PasswordField).
 
 
@@ -596,6 +597,10 @@ So, come back in a few weeks for that.
 History Log
 =============
 
+- 1.6.0 -- 2019-04-17
+
+    - add RequiredDateValidator 
+    
 - 1.5.0 -- 2019-04-17
 
     - update htmlName in AbstractField, now does never has the trailing brackets [] 

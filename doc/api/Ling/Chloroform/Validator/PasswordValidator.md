@@ -138,4 +138,4 @@ Ling\Chloroform\Validator\PasswordValidator
 
 SeeAlso
 ==============
-Previous class: [PasswordConfirmValidator](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/PasswordConfirmValidator.md)<br>Next class: [RequiredValidator](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/RequiredValidator.md)<br>
+Previous class: [PasswordConfirmValidator](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/PasswordConfirmValidator.md)<br>Next class: [RequiredDateValidator](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/RequiredDateValidator.md)<br>
