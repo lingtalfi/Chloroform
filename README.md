@@ -597,6 +597,10 @@ So, come back in a few weeks for that.
 History Log
 =============
 
+- 1.6.4 -- 2019-04-18
+
+    - minor change in documentation
+
 - 1.6.3 -- 2019-04-18
 
     - fix FileMimeTypeValidator->setMimeTypes method not returning the instance

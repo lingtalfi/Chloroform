@@ -216,7 +216,7 @@ class Chloroform
      * The blueprint looks like this:
      *
      *
-     * ```yaml
+     * ```babyYaml
      * notifications:
      *      -
      *          type: string, the type of notification (success, info, warning, error)
