@@ -597,6 +597,10 @@ So, come back in a few weeks for that.
 History Log
 =============
 
+- 1.6.7 -- 2019-04-18
+
+    - fix FileMimeTypeValidator test failing if file was not uploaded
+    
 - 1.6.6 -- 2019-04-18
 
     - minor change in documentation
