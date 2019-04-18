@@ -597,6 +597,10 @@ So, come back in a few weeks for that.
 History Log
 =============
 
+- 1.6.6 -- 2019-04-18
+
+    - minor change in documentation
+    
 - 1.6.5 -- 2019-04-18
 
     - minor change in documentation
