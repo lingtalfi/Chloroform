@@ -216,16 +216,16 @@ class Chloroform
      * The blueprint looks like this:
      *
      *
-     * ```babyYaml
+     * ```yaml
      * notifications:
-     *      -
+     *      $n:
      *          type: string, the type of notification (success, info, warning, error)
      *          msg: string, the message of the notification
      * errors: a summary of the form errors (for the templates to use).
      *          It's actually nothing more than the fields errors put altogether here.
      *
      * fields:
-     *      -
+     *      $n:
      *          the array version of the field (see the @page(FieldInterface->toArray method) for more info)
      *
      * ```
