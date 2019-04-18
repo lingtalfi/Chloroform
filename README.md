@@ -597,6 +597,10 @@ So, come back in a few weeks for that.
 History Log
 =============
 
+- 1.6.1 -- 2019-04-18
+
+    - fix translations for MinMaxCharValidator 
+    
 - 1.6.0 -- 2019-04-17
 
     - add RequiredDateValidator 
