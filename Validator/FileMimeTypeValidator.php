@@ -38,10 +38,12 @@ class FileMimeTypeValidator extends AbstractValidator
      * Sets the allowedMimeTypes.
      *
      * @param array $allowedMimeTypes
+     * @return $this
      */
     public function setMimeTypes(array $allowedMimeTypes)
     {
         $this->allowedMimeTypes = $allowedMimeTypes;
+        return $this;
     }
 
 
@@ -76,7 +78,6 @@ class FileMimeTypeValidator extends AbstractValidator
         }
         return true;
     }
-
 
 
     /**
