@@ -44,6 +44,11 @@ Returns bool.
 
 
 
+Source Code
+===========
+See the source code for method [Chloroform::isPosted](https://github.com/lingtalfi/Chloroform/blob/master/Form/Chloroform.php#L58-L62)
+
+
 See Also
 ================
 

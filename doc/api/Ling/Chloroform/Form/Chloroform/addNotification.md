@@ -47,6 +47,11 @@ Returns void.
 
 
 
+Source Code
+===========
+See the source code for method [Chloroform::addNotification](https://github.com/lingtalfi/Chloroform/blob/master/Form/Chloroform.php#L197-L200)
+
+
 See Also
 ================
 

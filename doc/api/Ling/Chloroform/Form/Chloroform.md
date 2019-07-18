@@ -4,7 +4,7 @@
 
 The Chloroform class
 ================
-2019-04-10 --> 2019-04-30
+2019-04-10 --> 2019-07-18
 
 
 
@@ -94,7 +94,9 @@ Methods
 
 Location
 =============
-Ling\Chloroform\Form\Chloroform
+Ling\Chloroform\Form\Chloroform<br>
+See the source code of [Ling\Chloroform\Form\Chloroform](https://github.com/lingtalfi/Chloroform/blob/master/Form/Chloroform.php)
+
 
 
 SeeAlso

@@ -45,6 +45,11 @@ Returns array.
 
 
 
+Source Code
+===========
+See the source code for method [Chloroform::createPostedData](https://github.com/lingtalfi/Chloroform/blob/master/Form/Chloroform.php#L284-L287)
+
+
 See Also
 ================
 

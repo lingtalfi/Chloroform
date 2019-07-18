@@ -606,6 +606,10 @@ Here is a list of known chloroform renderers:
 History Log
 =============
 
+- 1.6.9 -- 2019-07-18
+
+    - update docTools documentation, add links to source code for classes and methods
+    
 - 1.6.8 -- 2019-04-29
 
     - add README link to Chloroform_HydrogenRenderer

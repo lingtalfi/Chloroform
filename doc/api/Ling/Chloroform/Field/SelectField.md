@@ -4,7 +4,7 @@
 
 The SelectField class
 ================
-2019-04-10 --> 2019-04-30
+2019-04-10 --> 2019-07-18
 
 
 
@@ -164,7 +164,9 @@ Methods
 
 Location
 =============
-Ling\Chloroform\Field\SelectField
+Ling\Chloroform\Field\SelectField<br>
+See the source code of [Ling\Chloroform\Field\SelectField](https://github.com/lingtalfi/Chloroform/blob/master/Field/SelectField.php)
+
 
 
 SeeAlso

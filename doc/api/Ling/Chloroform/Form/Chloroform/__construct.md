@@ -44,6 +44,11 @@ Returns void.
 
 
 
+Source Code
+===========
+See the source code for method [Chloroform::__construct](https://github.com/lingtalfi/Chloroform/blob/master/Form/Chloroform.php#L45-L50)
+
+
 See Also
 ================
 
