@@ -611,6 +611,10 @@ Here is a list of known chloroform renderers:
 History Log
 =============
 
+- 1.8.1 -- 2019-07-26
+
+    - fix chloroform_hidden_key problems
+    
 - 1.8.0 -- 2019-07-26
 
     - add isPosted property in the chloroform array

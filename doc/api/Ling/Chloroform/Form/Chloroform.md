@@ -84,7 +84,6 @@ Properties
     This property holds the formId for this instance.
     This is helpful if your page contains multiple forms, to differentiate
     which form was actually submitted.
-    If your page only has one form, you don't need to set this property.
     
     
 

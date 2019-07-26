@@ -51,9 +51,8 @@ class Chloroform
      * This property holds the formId for this instance.
      * This is helpful if your page contains multiple forms, to differentiate
      * which form was actually submitted.
-     * If your page only has one form, you don't need to set this property.
      *
-     * @var string = null
+     * @var string = chloroform_one
      */
     protected $formId;
 
@@ -66,19 +65,22 @@ class Chloroform
         $this->fields = [];
         $this->notifications = [];
         $this->_postedData = null;
-        $this->formId = null;
+        $this->formId = "chloroform_one";
+        $this->fields[] = HiddenField::create("chloroform_hidden_key", ['value' => $this->formId]);
         $this->_isPosted = false;
+
     }
 
     /**
      * Sets the formId.
      *
      * @param string $formId
+     * @throws ChloroformException
      */
     public function setFormId(string $formId)
     {
         $this->formId = $formId;
-        $this->fields[] = HiddenField::create("chloroform_hidden_key", ['value' => $formId]);
+        $this->getField("chloroform_hidden_key")->setValue($this->formId);
     }
 
 
@@ -89,6 +91,9 @@ class Chloroform
      */
     public function isPosted(): bool
     {
+        if (null === $this->_postedData) {
+            $this->_postedData = $this->createPostedData();
+        }
         return $this->_isPosted;
     }
 
@@ -317,9 +322,7 @@ class Chloroform
      */
     protected function createPostedData(): array
     {
-        if (
-            null === $this->formId ||
-            (array_key_exists("chloroform_hidden_key", $_POST) && $this->formId === $_POST['chloroform_hidden_key'])) {
+        if (array_key_exists("chloroform_hidden_key", $_POST) && $this->formId === $_POST['chloroform_hidden_key']) {
             $ret = array_merge($_POST, PhpUploadFileFixTool::fixPhpFiles($_FILES, true));
             unset($ret['chloroform_hidden_key']);
             $this->_isPosted = true;
