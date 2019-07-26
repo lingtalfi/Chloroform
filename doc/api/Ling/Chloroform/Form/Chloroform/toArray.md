@@ -63,7 +63,7 @@ Returns array.
 
 Source Code
 ===========
-See the source code for method [Chloroform::toArray](https://github.com/lingtalfi/Chloroform/blob/master/Form/Chloroform.php#L237-L272)
+See the source code for method [Chloroform::toArray](https://github.com/lingtalfi/Chloroform/blob/master/Form/Chloroform.php#L262-L297)
 
 
 See Also

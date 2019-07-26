@@ -606,6 +606,10 @@ Here is a list of known chloroform renderers:
 History Log
 =============
 
+- 1.7.0 -- 2019-07-26
+
+    - add Chloroform default mechanism for identifying if the form was posted when there are multiple forms in the same page
+
 - 1.6.9 -- 2019-07-18
 
     - update docTools documentation, add links to source code for classes and methods

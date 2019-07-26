@@ -8,6 +8,7 @@ use Ling\Bat\BDotTool;
 use Ling\Chloroform\Exception\ChloroformException;
 use Ling\Chloroform\Field\FieldInterface;
 use Ling\Chloroform\Field\FormAwareFieldInterface;
+use Ling\Chloroform\Field\HiddenField;
 use Ling\Chloroform\FormNotification\FormNotificationInterface;
 use Ling\Chloroform\Validator\ValidatorInterface;
 use Ling\PhpUploadFileFix\PhpUploadFileFixTool;
@@ -39,6 +40,18 @@ class Chloroform
      */
     private $_postedData;
 
+
+    /**
+     * This property holds the formId for this instance.
+     * This is helpful if your page contains multiple forms, to differentiate
+     * which form was actually submitted.
+     * If your page only has one form, you don't need to set this property.
+     *
+     * @var string = null
+     */
+    protected $formId;
+
+
     /**
      * Builds the Chloroform instance.
      */
@@ -47,6 +60,18 @@ class Chloroform
         $this->fields = [];
         $this->notifications = [];
         $this->_postedData = null;
+        $this->formId = null;
+    }
+
+    /**
+     * Sets the formId.
+     *
+     * @param string $formId
+     */
+    public function setFormId(string $formId)
+    {
+        $this->formId = $formId;
+        $this->fields[] = HiddenField::create("chloroform_hidden_key", ['value' => $formId]);
     }
 
 
@@ -63,7 +88,7 @@ class Chloroform
 
 
     /**
-     * Returns an array of posted data.
+     * Returns an array of posted data (for this instance).
      *
      * The posted data is empty if no form was posted, and otherwise is the
      * array described in @page(the postedData section).
@@ -283,6 +308,13 @@ class Chloroform
      */
     protected function createPostedData(): array
     {
-        return array_merge($_POST, PhpUploadFileFixTool::fixPhpFiles($_FILES, true));
+        if (
+            null === $this->formId ||
+            (array_key_exists("chloroform_hidden_key", $_POST) && $this->formId === $_POST['chloroform_hidden_key'])) {
+            $ret = array_merge($_POST, PhpUploadFileFixTool::fixPhpFiles($_FILES, true));
+            unset($ret['chloroform_hidden_key']);
+            return $ret;
+        }
+        return [];
     }
 }
