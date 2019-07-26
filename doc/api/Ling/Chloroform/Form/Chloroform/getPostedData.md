@@ -52,7 +52,7 @@ Returns array.
 
 Source Code
 ===========
-See the source code for method [Chloroform::getPostedData](https://github.com/lingtalfi/Chloroform/blob/master/Form/Chloroform.php#L103-L110)
+See the source code for method [Chloroform::getPostedData](https://github.com/lingtalfi/Chloroform/blob/master/Form/Chloroform.php#L109-L116)
 
 
 See Also

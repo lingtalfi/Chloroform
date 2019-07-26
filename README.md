@@ -101,7 +101,8 @@ a($form->toArray());
 The toArray method will output something like this (after submitting the form without typing anything):
 
 ```html
-array(3) {
+array(4) {
+  ["isPosted"] => bool(false)
   ["notifications"] => array(1) {
     [0] => array(2) {
       ["type"] => string(7) "success"
@@ -191,7 +192,8 @@ a($form->toArray());
 The toArray method will output something like this (after submitting the form without typing anything):
 
 ```html
-array(3) {
+array(4) {
+  ["isPosted"] => bool(false)
   ["notifications"] => array(1) {
     [0] => array(2) {
       ["type"] => string(5) "error"
@@ -281,7 +283,8 @@ The toArray method will output something like this (after submitting the form wi
 
 
 ```html
-array(3) {
+array(4) {
+  ["isPosted"] => bool(false)
   ["notifications"] => array(1) {
     [0] => array(2) {
       ["type"] => string(5) "error"
@@ -393,7 +396,8 @@ The toArray method will output something like this (after submitting the form wi
 
 ```html
 
-array(3) {
+array(4) {
+  ["isPosted"] => bool(false)
   ["notifications"] => array(1) {
     [0] => array(2) {
       ["type"] => string(5) "error"
@@ -497,7 +501,8 @@ The toArray method will output something like this (after submitting the form wi
 
 
 ```html
-array(3) {
+array(4) {
+  ["isPosted"] => bool(false)
   ["notifications"] => array(1) {
     [0] => array(2) {
       ["type"] => string(7) "success"
@@ -606,6 +611,10 @@ Here is a list of known chloroform renderers:
 History Log
 =============
 
+- 1.8.0 -- 2019-07-26
+
+    - add isPosted property in the chloroform array
+    
 - 1.7.0 -- 2019-07-26
 
     - add Chloroform default mechanism for identifying if the form was posted when there are multiple forms in the same page

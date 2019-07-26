@@ -47,7 +47,7 @@ Returns [FieldInterface[]](https://github.com/lingtalfi/Chloroform/blob/master/d
 
 Source Code
 ===========
-See the source code for method [Chloroform::getFields](https://github.com/lingtalfi/Chloroform/blob/master/Form/Chloroform.php#L150-L153)
+See the source code for method [Chloroform::getFields](https://github.com/lingtalfi/Chloroform/blob/master/Form/Chloroform.php#L156-L159)
 
 
 See Also

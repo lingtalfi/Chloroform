@@ -28,6 +28,7 @@ class <span class="pl-k">Chloroform</span>  {
     - protected [Ling\Chloroform\Field\FieldInterface[]](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/FieldInterface.md) [$fields](#property-fields) ;
     - protected [Ling\Chloroform\FormNotification\FormNotificationInterface[]](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/FormNotification/FormNotificationInterface.md) [$notifications](#property-notifications) ;
     - private array [$_postedData](#property-_postedData) ;
+    - private bool [$_isPosted](#property-_isPosted) ;
     - protected string [$formId](#property-formId) ;
 
 - Methods
@@ -69,6 +70,12 @@ Properties
 
     This property holds the _postedData for this instance.
     It's a cached data used to improve performances.
+    
+    
+
+- <span id="property-_isPosted"><b>_isPosted</b></span>
+
+    This property holds whether this form instance was posted.
     
     
 

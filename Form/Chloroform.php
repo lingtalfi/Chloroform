@@ -40,6 +40,12 @@ class Chloroform
      */
     private $_postedData;
 
+    /**
+     * This property holds whether this form instance was posted.
+     * @var bool
+     */
+    private $_isPosted;
+
 
     /**
      * This property holds the formId for this instance.
@@ -61,6 +67,7 @@ class Chloroform
         $this->notifications = [];
         $this->_postedData = null;
         $this->formId = null;
+        $this->_isPosted = false;
     }
 
     /**
@@ -82,8 +89,7 @@ class Chloroform
      */
     public function isPosted(): bool
     {
-        $postedData = $this->getPostedData();
-        return (false === empty($postedData));
+        return $this->_isPosted;
     }
 
 
@@ -242,6 +248,8 @@ class Chloroform
      *
      *
      * ```yaml
+     * isPosted: bool, whether this form instance was submitted.
+     *
      * notifications:
      *      -
      *          type: string, the type of notification (success, info, warning, error)
@@ -290,6 +298,7 @@ class Chloroform
         }
 
         return [
+            "isPosted" => $this->_isPosted,
             "notifications" => $notificationsDetails,
             "fields" => $fieldsDetails,
             "errors" => $errors,
@@ -313,6 +322,7 @@ class Chloroform
             (array_key_exists("chloroform_hidden_key", $_POST) && $this->formId === $_POST['chloroform_hidden_key'])) {
             $ret = array_merge($_POST, PhpUploadFileFixTool::fixPhpFiles($_FILES, true));
             unset($ret['chloroform_hidden_key']);
+            $this->_isPosted = true;
             return $ret;
         }
         return [];
