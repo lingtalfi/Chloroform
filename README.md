@@ -595,6 +595,7 @@ Here is a list of known chloroform renderers:
 
 
 - [Chloroform_HydrogenRenderer](https://github.com/lingtalfi/Chloroform_HydrogenRenderer)
+- [Chloroform_HeliumRenderer](https://github.com/lingtalfi/Chloroform_HeliumRenderer)
 
 
 
@@ -611,6 +612,10 @@ Here is a list of known chloroform renderers:
 History Log
 =============
 
+- 1.8.2 -- 2019-07-26
+
+    - update doc
+    
 - 1.8.1 -- 2019-07-26
 
     - fix chloroform_hidden_key problems
