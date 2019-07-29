@@ -66,7 +66,7 @@ class Chloroform
         $this->notifications = [];
         $this->_postedData = null;
         $this->formId = "chloroform_one";
-        $this->fields[] = HiddenField::create("chloroform_hidden_key", ['value' => $this->formId]);
+        $this->addField(HiddenField::create("chloroform_hidden_key", ['value' => $this->formId]));
         $this->_isPosted = false;
 
     }
