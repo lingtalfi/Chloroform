@@ -542,6 +542,79 @@ array(4) {
 ```
 
 
+
+
+
+
+Example #6: the input field
+--------------
+
+Input fields are special in that the value returned is the php file item provided in the $_FILES super array (the one
+with the following entries: name, type, tmp_name, size and error).
+
+In other words, if you have a chloroform instance with a file field, like this:
+
+
+```php
+<?php
+
+
+use Ling\Chloroform\Field\FileField;
+use Ling\Chloroform\Form\Chloroform;
+
+$form = new Chloroform();
+$form->addField(FileField::create("Avatar url", [
+    "value" => "/img/the-avatar.jpg",
+]));
+
+```
+
+Once the form is submitted (provided that you used the enctype=multipart/form-data attribute on the form),
+the resulting chloroform array will look like this:
+
+
+```html 
+array(4) {
+  ["isPosted"] => bool(true)
+  ["notifications"] => array(1) {
+    [0] => array(2) {
+      ["type"] => string(7) "success"
+      ["message"] => string(2) "ok"
+    }
+  }
+  ["fields"] => array(1) {
+    ["avatar_url"] => array(9) {
+      ["value"] => array(5) {
+        ["name"] => string(0) ""
+        ["type"] => string(0) ""
+        ["tmp_name"] => string(0) ""
+        ["error"] => int(4)
+        ["size"] => int(0)
+      }
+      ["label"] => string(10) "Avatar url"
+      ["id"] => string(10) "avatar_url"
+      ["hint"] => NULL
+      ["errorName"] => string(10) "avatar url"
+      ["htmlName"] => string(10) "avatar_url"
+      ["errors"] => array(0) {
+      }
+      ["className"] => string(31) "Ling\Chloroform\Field\FileField"
+      ["validators"] => array(0) {
+      }
+    }
+  ["errors"] => array(0) {
+  }
+}
+
+```
+
+
+
+
+
+
+
+
 The available fields
 ===========
 
@@ -612,6 +685,10 @@ Here is a list of known chloroform renderers:
 History Log
 =============
 
+- 1.8.4 -- 2019-07-31
+
+    - fix Chloroform getPostedData not returning the chloroform_hidden_key
+    
 - 1.8.3 -- 2019-07-29
 
     - fix Chloroform->__construct not adding the hidden field correctly

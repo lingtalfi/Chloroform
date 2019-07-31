@@ -324,7 +324,6 @@ class Chloroform
     {
         if (array_key_exists("chloroform_hidden_key", $_POST) && $this->formId === $_POST['chloroform_hidden_key']) {
             $ret = array_merge($_POST, PhpUploadFileFixTool::fixPhpFiles($_FILES, true));
-            unset($ret['chloroform_hidden_key']);
             $this->_isPosted = true;
             return $ret;
         }
