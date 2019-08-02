@@ -631,6 +631,8 @@ The available fields
 - CheckboxField: is generally represented by some html input tags of type checkbox.
 - RadioField: is generally represented by some html input tags of type radio.
 - FileField: is generally represented by an html input tag of type file.
+- AjaxFileBoxField: is generally represented by an html input tag of type file with a drop zone. It's coupled with a third-party javascript client and a backend service to provide the desired functionality of 
+        uploading the files via ajax.
 - PasswordField: is generally represented by an html input tag of type password.
 
 
@@ -684,6 +686,10 @@ Here is a list of known chloroform renderers:
 
 History Log
 =============
+
+- 1.9.0 -- 2019-08-02
+
+    - add AjaxFileBoxField class
 
 - 1.8.4 -- 2019-07-31
 
