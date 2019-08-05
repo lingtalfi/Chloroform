@@ -687,6 +687,10 @@ Here is a list of known chloroform renderers:
 History Log
 =============
 
+- 1.11.0 -- 2019-08-05
+
+    - update CSRFValidator to work with CSRFTools 1.1.0
+    
 - 1.10.0 -- 2019-08-05
 
     - add the AjaxFileBoxField postParams property
