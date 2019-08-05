@@ -50,6 +50,7 @@ namespace Ling\Chloroform\Field;
  *                  - ...
  * - maxFileSize: int=null, the maximum number of byte per file. If null, this means that there is no limitation for the file weight.
  * - mimeType: string|array=null the allowed mime types. If null, this means that there is no limitation for the file mime type.
+ * - postParams: array=[]. An array of parameters to pass along with the uploaded file. The params are passed to the $_POST array.
  *
  *
  * Note: the backend service should have a validation layer too, and both layers (the one provided by javascript and
@@ -83,6 +84,7 @@ class AjaxFileBoxField extends AbstractField
             "maxFile" => 1,
             "maxFileSize" => null,
             "mimeType" => null,
+            "postParams" => [],
         ];
         $properties = array_replace($defaultValues, $properties);
         return new static($properties);

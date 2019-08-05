@@ -4,7 +4,7 @@
 
 The AjaxFileBoxField class
 ================
-2019-04-10 --> 2019-08-02
+2019-04-10 --> 2019-08-05
 
 
 
@@ -60,6 +60,7 @@ The properties handled by this class (and passed to the js client) are the follo
                  - ...
 - maxFileSize: int=null, the maximum number of byte per file. If null, this means that there is no limitation for the file weight.
 - mimeType: string|array=null the allowed mime types. If null, this means that there is no limitation for the file mime type.
+- postParams: array=[]. An array of parameters to pass along with the uploaded file. The params are passed to the $_POST array.
 
 
 Note: the backend service should have a validation layer too, and both layers (the one provided by javascript and
