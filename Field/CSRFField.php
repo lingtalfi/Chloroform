@@ -44,7 +44,7 @@ class CSRFField extends HiddenField
      */
     public function __construct(array $properties = [])
     {
-        $this->CSRFIdentifier = "default";
+        $this->CSRFIdentifier = "chloroform-csrf-field";
         $this->_tokenCreated = false;
         $this->csrfProtector = null;
         parent::__construct($properties);
