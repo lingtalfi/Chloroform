@@ -687,6 +687,10 @@ Here is a list of known chloroform renderers:
 History Log
 =============
 
+- 1.13.0 -- 2019-10-16
+
+    - renamed CSRFField->setCSRFIdentifier to setCsrfIdentifier and getCSRFIdentifier to getCsrfIdentifier   
+    
 - 1.12.1 -- 2019-09-20
 
     - update CSRFField, changed token name form default to chloroform-csrf-field 

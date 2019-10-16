@@ -4,7 +4,7 @@
 
 The CSRFField class
 ================
-2019-04-10 --> 2019-09-20
+2019-04-10 --> 2019-10-16
 
 
 
@@ -25,7 +25,7 @@ Class synopsis
 class <span class="pl-k">CSRFField</span> extends [HiddenField](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/HiddenField.md) implements [FieldInterface](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/FieldInterface.md) {
 
 - Properties
-    - protected string [$CSRFIdentifier](#property-CSRFIdentifier) ;
+    - protected string [$csrfIdentifier](#property-csrfIdentifier) ;
     - protected [Ling\CSRFTools\CSRFProtector](https://github.com/lingtalfi/CSRFTools/blob/master/doc/api/Ling/CSRFTools/CSRFProtector.md) [$csrfProtector](#property-csrfProtector) ;
     - private bool [$_tokenCreated](#property-_tokenCreated) ;
 
@@ -41,8 +41,8 @@ class <span class="pl-k">CSRFField</span> extends [HiddenField](https://github.c
 
 - Methods
     - public [__construct](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/CSRFField/__construct.md)(array $properties = []) : void
-    - public [setCSRFIdentifier](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/CSRFField/setCSRFIdentifier.md)(string $CSRFIdentifier) : [CSRFField](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/CSRFField.md)
-    - public [getCSRFIdentifier](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/CSRFField/getCSRFIdentifier.md)() : string
+    - public [setCsrfIdentifier](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/CSRFField/setCsrfIdentifier.md)(string $csrfIdentifier) : [CSRFField](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/CSRFField.md)
+    - public [getCsrfIdentifier](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/CSRFField/getCsrfIdentifier.md)() : string
     - public [setCsrfProtector](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/CSRFField/setCsrfProtector.md)([Ling\CSRFTools\CSRFProtector](https://github.com/lingtalfi/CSRFTools/blob/master/doc/api/Ling/CSRFTools/CSRFProtector.md) $csrfProtector) : [CSRFField](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/CSRFField.md)
     - public [getValue](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/CSRFField/getValue.md)() : mixed
     - protected [getCsrfProtector](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/CSRFField/getCsrfProtector.md)() : [CSRFProtector](https://github.com/lingtalfi/CSRFTools/blob/master/doc/api/Ling/CSRFTools/CSRFProtector.md)
@@ -69,9 +69,9 @@ class <span class="pl-k">CSRFField</span> extends [HiddenField](https://github.c
 Properties
 =============
 
-- <span id="property-CSRFIdentifier"><b>CSRFIdentifier</b></span>
+- <span id="property-csrfIdentifier"><b>csrfIdentifier</b></span>
 
-    This property holds the CSRFIdentifier for this instance.
+    This property holds the csrfIdentifier for this instance.
     
     The [Csrf identifier](https://github.com/lingtalfi/CSRFTools#a-quick-word-about-concurrent-csrf-tokens).
     
@@ -154,8 +154,8 @@ Methods
 ==============
 
 - [CSRFField::__construct](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/CSRFField/__construct.md) &ndash; Builds the AbstractField instance.
-- [CSRFField::setCSRFIdentifier](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/CSRFField/setCSRFIdentifier.md) &ndash; Sets the CSRFIdentifier.
-- [CSRFField::getCSRFIdentifier](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/CSRFField/getCSRFIdentifier.md) &ndash; Returns the CSRFIdentifier of this instance.
+- [CSRFField::setCsrfIdentifier](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/CSRFField/setCsrfIdentifier.md) &ndash; Sets the csrfIdentifier.
+- [CSRFField::getCsrfIdentifier](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/CSRFField/getCsrfIdentifier.md) &ndash; Returns the csrfIdentifier of this instance.
 - [CSRFField::setCsrfProtector](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/CSRFField/setCsrfProtector.md) &ndash; Sets the csrfProtector.
 - [CSRFField::getValue](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/CSRFField/getValue.md) &ndash; Returns the value of the field.
 - [CSRFField::getCsrfProtector](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/CSRFField/getCsrfProtector.md) &ndash; Returns the csrf protector instance.
