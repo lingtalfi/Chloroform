@@ -687,6 +687,10 @@ Here is a list of known chloroform renderers:
 History Log
 =============
 
+- 1.13.1 -- 2019-10-17
+
+    - add precision to AjaxFileBoxField class comment
+    
 - 1.13.0 -- 2019-10-16
 
     - renamed CSRFField->setCSRFIdentifier to setCsrfIdentifier and getCSRFIdentifier to getCsrfIdentifier   
