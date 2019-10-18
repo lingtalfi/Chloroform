@@ -39,6 +39,7 @@ Summary
 - Pages
     - [Chloroform diary](https://github.com/lingtalfi/Chloroform/blob/master/doc/pages/chloroform-diary.md)
     - [Chloroform discussion](https://github.com/lingtalfi/Chloroform/blob/master/doc/pages/chloroform-discussion.md)
+    - [Chloroform array](https://github.com/lingtalfi/Chloroform/blob/master/doc/pages/chloroform-array.md)
 
 
 
@@ -686,6 +687,10 @@ Here is a list of known chloroform renderers:
 
 History Log
 =============
+
+- 1.14.0 -- 2019-10-18
+
+    - add chloroform array document
 
 - 1.13.1 -- 2019-10-17
 

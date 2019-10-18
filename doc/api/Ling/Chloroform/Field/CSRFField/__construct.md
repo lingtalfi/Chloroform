@@ -16,7 +16,7 @@ Description
 ================
 
 
-public [CSRFField::__construct](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/CSRFField/__construct.md)(array $properties = []) : void
+public [CSRFField::__construct](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/CSRFField/__construct.md)(?array $properties = []) : void
 
 
 

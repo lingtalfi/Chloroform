@@ -16,7 +16,7 @@ Description
 ================
 
 
-abstract public [FieldInterface::validates](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/FieldInterface/validates.md)(array $postedData, bool $injectValues = true) : bool
+abstract public [FieldInterface::validates](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/FieldInterface/validates.md)(array $postedData, ?bool $injectValues = true) : bool
 
 
 
