@@ -688,6 +688,10 @@ Here is a list of known chloroform renderers:
 History Log
 =============
 
+- 1.14.1 -- 2019-10-18
+
+    - add precision to chloroform array
+    
 - 1.14.0 -- 2019-10-18
 
     - add chloroform array document

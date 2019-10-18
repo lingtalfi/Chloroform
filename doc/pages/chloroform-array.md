@@ -19,7 +19,7 @@ It has the following structure:
 - fields: array. An array of fields. Each field represent a form control.
                 Each field is also an array, which structure depends on the field.
                 However, a field array should have at least the following properties:
-                    - id: string                  # the field id
+                    - id: string                  # the field id (https://github.com/lingtalfi/Chloroform/blob/master/doc/pages/chloroform-discussion.md#the-field-id)
                     - label: string|null          # the label
                     - hint: string|null           # the hint (often used in placeholder)
                     - errorName: string           # the label to use in an error message
