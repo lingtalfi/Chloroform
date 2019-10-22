@@ -49,7 +49,7 @@ Returns mixed.
 
 Source Code
 ===========
-See the source code for method [FieldInterface::addValidator](https://github.com/lingtalfi/Chloroform/blob/master/Field/FieldInterface.php#L29-L29)
+See the source code for method [FieldInterface::addValidator](https://github.com/lingtalfi/Chloroform/blob/master/Field/FieldInterface.php#L30-L30)
 
 
 See Also

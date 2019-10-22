@@ -59,7 +59,7 @@ Returns array.
 
 Source Code
 ===========
-See the source code for method [AbstractField::toArray](https://github.com/lingtalfi/Chloroform/blob/master/Field/AbstractField.php#L226-L245)
+See the source code for method [AbstractField::toArray](https://github.com/lingtalfi/Chloroform/blob/master/Field/AbstractField.php#L224-L243)
 
 
 See Also

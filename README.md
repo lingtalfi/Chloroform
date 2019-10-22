@@ -49,6 +49,137 @@ How to use
 ========
 
 
+
+Latest example
+--------------
+2019-10-22
+
+
+This is how you should use the chloroform.
+
+
+```php
+//--------------------------------------------
+// Creating the form
+//--------------------------------------------
+$form = new Chloroform();
+$form->addField(StringField::create("First name"));
+
+
+
+
+
+//--------------------------------------------
+// Posting the form and validating data
+//--------------------------------------------
+if (true === $form->isPosted()) {
+    if (true === $form->validates()) {
+
+        // gets the data
+        $data = $form->getVeryImportantData();
+
+
+        // do some more checking here if necessary
+
+
+        // eventually add a valid notification when you think it's ok
+        $form->addNotification(SuccessFormNotification::create("ok"));
+
+        // get the data in its final form
+        $form->executeDataTransformers($data);
+
+
+        // now do something with $data (i.e. update database, send email, ...)
+        a($data);
+
+
+    } else {
+        $form->addNotification(ErrorFormNotification::create("There was a problem."));
+    }
+} else {
+    $valuesFromDb = []; // get the values from the database if necessary...
+    $form->injectValues($valuesFromDb);
+}
+
+
+//--------------------------------------------
+// Template part
+//--------------------------------------------
+$formArray = $form->toArray();
+a($formArray);
+?>
+<form method="post" action="">
+    <label>
+        First name
+        <input type="text" name="first_name"/>
+    </label>
+
+    <input type="submit" value="Submit"/>
+    <?php ChloroformRendererHelper::printsFormIdKeyControl($formArray); ?>
+</form>
+
+
+```
+
+
+
+If I post the form above (without filling anything), I obtain the following:
+
+
+```html 
+// a($data)
+array(1) {
+  ["first_name"] => string(0) ""
+}
+
+// a($formArray)
+array(4) {
+  ["isPosted"] => bool(true)
+  ["notifications"] => array(1) {
+    [0] => array(2) {
+      ["type"] => string(7) "success"
+      ["message"] => string(2) "ok"
+    }
+  }
+  ["fields"] => array(2) {
+    ["chloroform_hidden_key"] => array(9) {
+      ["value"] => string(14) "chloroform_one"
+      ["id"] => string(21) "chloroform_hidden_key"
+      ["label"] => NULL
+      ["hint"] => NULL
+      ["errorName"] => string(21) "chloroform hidden key"
+      ["htmlName"] => string(21) "chloroform_hidden_key"
+      ["errors"] => array(0) {
+      }
+      ["className"] => string(33) "Ling\Chloroform\Field\HiddenField"
+      ["validators"] => array(0) {
+      }
+    }
+    ["first_name"] => array(9) {
+      ["label"] => string(10) "First name"
+      ["id"] => string(10) "first_name"
+      ["hint"] => NULL
+      ["errorName"] => string(10) "first name"
+      ["value"] => string(0) ""
+      ["htmlName"] => string(10) "first_name"
+      ["errors"] => array(0) {
+      }
+      ["className"] => string(33) "Ling\Chloroform\Field\StringField"
+      ["validators"] => array(0) {
+      }
+    }
+  }
+  ["errors"] => array(0) {
+  }
+}
+
+
+```
+
+
+
+
+
 Example #1: the simplest form
 -----------
 
@@ -84,7 +215,8 @@ if (true === $form->isPosted()) {
 //--------------------------------------------
 // Template part
 //--------------------------------------------
-a($form->toArray());
+$formArray = $form->toArray();
+a($formArray);
 ?>
     <form method="post" action="">
         <label>
@@ -93,6 +225,7 @@ a($form->toArray());
         </label>
 
         <input type="submit" value="Submit"/>
+        <?php ChloroformRendererHelper::printsFormIdKeyControl($formArray); ?>
     </form>
 <?php
 
@@ -173,7 +306,8 @@ if (true === $form->isPosted()) {
 //--------------------------------------------
 // Template part
 //--------------------------------------------
-a($form->toArray());
+$formArray = $form->toArray();
+a($formArray);
 ?>
     <form method="post" action="">
         <label>
@@ -182,6 +316,7 @@ a($form->toArray());
         </label>
 
         <input type="submit" value="Submit"/>
+        <?php ChloroformRendererHelper::printsFormIdKeyControl($formArray); ?>
     </form>
 <?php
 
@@ -266,7 +401,8 @@ if (true === $form->isPosted()) {
 //--------------------------------------------
 // Template part
 //--------------------------------------------
-a($form->toArray());
+$formArray = $form->toArray();
+a($formArray);
 ?>
     <form method="post" action="">
         <label>
@@ -275,6 +411,7 @@ a($form->toArray());
         </label>
 
         <input type="submit" value="Submit"/>
+        <?php ChloroformRendererHelper::printsFormIdKeyControl($formArray); ?>
     </form>
 <?php
 
@@ -376,7 +513,8 @@ if (true === $form->isPosted()) {
 //--------------------------------------------
 // Template part
 //--------------------------------------------
-a($form->toArray());
+$formArray = $form->toArray();
+a($formArray);
 ?>
 <form method="post" action="">
     <label>
@@ -385,6 +523,7 @@ a($form->toArray());
     </label>
 
     <input type="submit" value="Submit"/>
+    <?php ChloroformRendererHelper::printsFormIdKeyControl($formArray); ?>
 </form>
 <?php 
 
@@ -492,6 +631,7 @@ a($formArray);
         </label>
 
         <input type="submit" value="Submit"/>
+        <?php ChloroformRendererHelper::printsFormIdKeyControl($formArray); ?>
     </form>
 <?php
 
@@ -687,6 +827,12 @@ Here is a list of known chloroform renderers:
 
 History Log
 =============
+
+- 1.16.0 -- 2019-10-22
+
+    - add DataTransformer concept
+    - removed FieldInterface->setHasVeryImportantData
+    - changed FieldInterface->validates method
 
 - 1.15.0 -- 2019-10-22
 

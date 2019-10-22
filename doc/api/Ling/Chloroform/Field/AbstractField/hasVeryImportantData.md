@@ -46,7 +46,7 @@ Returns bool.
 
 Source Code
 ===========
-See the source code for method [AbstractField::hasVeryImportantData](https://github.com/lingtalfi/Chloroform/blob/master/Field/AbstractField.php#L250-L253)
+See the source code for method [AbstractField::hasVeryImportantData](https://github.com/lingtalfi/Chloroform/blob/master/Field/AbstractField.php#L248-L251)
 
 
 See Also
@@ -54,5 +54,5 @@ See Also
 
 The [AbstractField](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/AbstractField.md) class.
 
-Previous method: [toArray](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/AbstractField/toArray.md)<br>Next method: [setHasVeryImportantData](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/AbstractField/setHasVeryImportantData.md)<br>
+Previous method: [toArray](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/AbstractField/toArray.md)<br>Next method: [getDataTransformer](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/AbstractField/getDataTransformer.md)<br>
 

@@ -46,7 +46,7 @@ Returns [FormNotificationInterface[]](https://github.com/lingtalfi/Chloroform/bl
 
 Source Code
 ===========
-See the source code for method [Chloroform::getNotifications](https://github.com/lingtalfi/Chloroform/blob/master/Form/Chloroform.php#L264-L267)
+See the source code for method [Chloroform::getNotifications](https://github.com/lingtalfi/Chloroform/blob/master/Form/Chloroform.php#L283-L286)
 
 
 See Also

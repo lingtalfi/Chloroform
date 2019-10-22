@@ -3,6 +3,7 @@
 namespace Ling\Chloroform\Field;
 
 
+use Ling\Chloroform\DataTransformer\DataTransformerInterface;
 use Ling\Chloroform\Validator\ValidatorInterface;
 
 /**
@@ -36,17 +37,14 @@ interface FieldInterface
      * Errors should then be retrieved using the getErrors method.
      *
      *
-     * If the injectValues flag is set to true, the value will be injected into the field.
      *
-     *
-     *
-     * @param array $postedData
-     * @param bool $injectValues = true
+     * @param mixed $value
+     * The value to validate.
      *
      *
      * @return bool
      */
-    public function validates(array $postedData, bool $injectValues = true): bool;
+    public function validates($value): bool;
 
 
     /**
@@ -108,11 +106,11 @@ interface FieldInterface
      */
     public function hasVeryImportantData(): bool;
 
+
     /**
-     * Sets whether this field contains @page(very important data).
+     * Returns the data transformer of this field if any, or null otherwise.
      *
-     * @param bool $hasVeryImportantData
-     * @return $this
+     * @return DataTransformerInterface|null
      */
-    public function setHasVeryImportantData(bool $hasVeryImportantData): FieldInterface;
+    public function getDataTransformer(): ?DataTransformerInterface;
 }

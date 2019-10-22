@@ -3,6 +3,7 @@
 namespace Ling\Chloroform\Field;
 
 
+use Ling\Chloroform\DataTransformer\DataTransformerInterface;
 use Ling\Chloroform\Helper\FieldHelper;
 use Ling\Chloroform\Validator\ValidatorInterface;
 
@@ -82,6 +83,12 @@ abstract class AbstractField implements FieldInterface
     protected $hasVeryImportantData;
 
     /**
+     * This property holds the dataTransformer for this instance.
+     * @var DataTransformerInterface
+     */
+    protected $dataTransformer;
+
+    /**
      * Builds the AbstractField instance.
      *
      *
@@ -131,6 +138,7 @@ abstract class AbstractField implements FieldInterface
         $this->errors = [];
         $this->validators = [];
         $this->hasVeryImportantData = true;
+        $this->dataTransformer = null;
     }
 
 
@@ -156,18 +164,8 @@ abstract class AbstractField implements FieldInterface
     /**
      * @implementation
      */
-    public function validates(array $postedData, bool $injectValues = true): bool
+    public function validates($value): bool
     {
-        $id = $this->getId();
-        $value = FieldHelper::getFieldValue($id, $postedData);
-
-
-        // value injection?
-        if (true === $injectValues) {
-            $this->setValue($value);
-        }
-
-
         // validation
         $isValid = true;
         if ($this->validators) {
@@ -252,15 +250,16 @@ abstract class AbstractField implements FieldInterface
         return $this->hasVeryImportantData;
     }
 
-
     /**
      * @implementation
      */
-    public function setHasVeryImportantData(bool $hasVeryImportantData): FieldInterface
+    public function getDataTransformer(): ?DataTransformerInterface
     {
-        $this->hasVeryImportantData = $hasVeryImportantData;
-        return $this;
+        return $this->dataTransformer;
     }
+
+
+
 
 
 
@@ -313,6 +312,31 @@ abstract class AbstractField implements FieldInterface
     public function setErrorName(string $errorName)
     {
         $this->errorName = $errorName;
+        return $this;
+    }
+
+
+    /**
+     * Sets whether this field has @page(very important data).
+     *
+     * @param bool $hasVeryImportantData
+     * @return $this
+     */
+    public function setHasVeryImportantData(bool $hasVeryImportantData): self
+    {
+        $this->hasVeryImportantData = $hasVeryImportantData;
+        return $this;
+    }
+
+    /**
+     * Sets the dataTransformer.
+     *
+     * @param DataTransformerInterface $dataTransformer
+     * @return $this
+     */
+    public function setDataTransformer(DataTransformerInterface $dataTransformer): self
+    {
+        $this->dataTransformer = $dataTransformer;
         return $this;
     }
 

@@ -10,6 +10,7 @@ use Ling\Chloroform\Field\FieldInterface;
 use Ling\Chloroform\Field\FormAwareFieldInterface;
 use Ling\Chloroform\Field\HiddenField;
 use Ling\Chloroform\FormNotification\FormNotificationInterface;
+use Ling\Chloroform\Helper\FieldHelper;
 use Ling\Chloroform\Validator\ValidatorInterface;
 use Ling\PhpUploadFileFix\PhpUploadFileFixTool;
 
@@ -140,7 +141,12 @@ class Chloroform
         $validates = true;
         foreach ($this->fields as $id => $field) {
 
-            if (false === $field->validates($postedData, true)) {
+            $value = FieldHelper::getFieldValue($id, $postedData);
+
+            // value injection
+            $field->setValue($value);
+
+            if (false === $field->validates($value)) {
                 /**
                  * Note: we don't break the loop to ensure that all the fields
                  * build their error messages.
@@ -169,9 +175,22 @@ class Chloroform
         return $veryImportantData;
     }
 
-//    public function executeDataTransformers(array &$postedData){
-//
-//    }
+
+    /**
+     * Execute the data transformers (see the @page(DataTransformerInterface) for more details) on the given postedData.
+     *
+     * @param array $postedData
+     */
+    public function executeDataTransformers(array &$postedData)
+    {
+        foreach ($this->fields as $id => $field) {
+            if (null !== ($transformer = $field->getDataTransformer())) {
+                $value = BDotTool::getDotValue($id, $postedData);
+                $transformer->transform($value, $postedData, $field);
+                BDotTool::setDotValue($id, $value, $postedData);
+            }
+        }
+    }
 
     /**
      * Returns the fields of this instance.

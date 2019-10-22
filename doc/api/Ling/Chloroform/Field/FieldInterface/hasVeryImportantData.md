@@ -46,7 +46,7 @@ Returns bool.
 
 Source Code
 ===========
-See the source code for method [FieldInterface::hasVeryImportantData](https://github.com/lingtalfi/Chloroform/blob/master/Field/FieldInterface.php#L109-L109)
+See the source code for method [FieldInterface::hasVeryImportantData](https://github.com/lingtalfi/Chloroform/blob/master/Field/FieldInterface.php#L107-L107)
 
 
 See Also
@@ -54,5 +54,5 @@ See Also
 
 The [FieldInterface](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/FieldInterface.md) class.
 
-Previous method: [toArray](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/FieldInterface/toArray.md)<br>Next method: [setHasVeryImportantData](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/FieldInterface/setHasVeryImportantData.md)<br>
+Previous method: [toArray](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/FieldInterface/toArray.md)<br>Next method: [getDataTransformer](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/FieldInterface/getDataTransformer.md)<br>
 

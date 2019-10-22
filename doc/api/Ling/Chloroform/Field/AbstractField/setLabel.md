@@ -49,7 +49,7 @@ Returns [AbstractField](https://github.com/lingtalfi/Chloroform/blob/master/doc/
 
 Source Code
 ===========
-See the source code for method [AbstractField::setLabel](https://github.com/lingtalfi/Chloroform/blob/master/Field/AbstractField.php#L289-L293)
+See the source code for method [AbstractField::setLabel](https://github.com/lingtalfi/Chloroform/blob/master/Field/AbstractField.php#L288-L292)
 
 
 See Also

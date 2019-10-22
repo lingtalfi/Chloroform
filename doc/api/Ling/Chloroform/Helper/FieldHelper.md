@@ -58,4 +58,4 @@ See the source code of [Ling\Chloroform\Helper\FieldHelper](https://github.com/l
 
 SeeAlso
 ==============
-Previous class: [WarningFormNotification](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/FormNotification/WarningFormNotification.md)<br>Next class: [ChloroformRendererInterface](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Renderer/ChloroformRendererInterface.md)<br>
+Previous class: [ChloroformRendererHelper](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Helper/ChloroformRendererHelper.md)<br>Next class: [ChloroformRendererInterface](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Renderer/ChloroformRendererInterface.md)<br>

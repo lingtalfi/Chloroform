@@ -64,4 +64,4 @@ See the source code of [Ling\Chloroform\FormNotification\WarningFormNotification
 
 SeeAlso
 ==============
-Previous class: [SuccessFormNotification](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/FormNotification/SuccessFormNotification.md)<br>Next class: [FieldHelper](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Helper/FieldHelper.md)<br>
+Previous class: [SuccessFormNotification](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/FormNotification/SuccessFormNotification.md)<br>Next class: [ChloroformRendererHelper](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Helper/ChloroformRendererHelper.md)<br>
