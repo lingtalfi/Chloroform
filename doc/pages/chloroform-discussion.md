@@ -149,6 +149,7 @@ However, not all the posted data is very important, some of the posted data, for
 
 - some posted data is just used to check whether this particular form (i.e. with a particular form id) was posted (and not another form)
 - some posted data is just used to check whether a csrf token is valid
+- some malicious user has added a lot of garbage data to your form
 
 We don't need that kind of data in the end, when updating the database or sending an email,
 and so this I call not very important data.

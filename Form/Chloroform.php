@@ -166,13 +166,14 @@ class Chloroform
      */
     public function getVeryImportantData(): array
     {
-        $veryImportantData = $this->getPostedData();
+        $ret = [];
+        $postedData = $this->getPostedData();
         foreach ($this->fields as $id => $field) {
-            if (false === $field->hasVeryImportantData()) {
-                BDotTool::unsetDotValue($id, $veryImportantData);
+            if (true === $field->hasVeryImportantData()) {
+                $ret[$id] = FieldHelper::getFieldValue($id, $postedData);
             }
         }
-        return $veryImportantData;
+        return $ret;
     }
 
 
