@@ -52,4 +52,4 @@ See the source code of [Ling\Chloroform\DataTransformer\DataTransformerInterface
 
 SeeAlso
 ==============
-Next class: [ChloroformException](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Exception/ChloroformException.md)<br>
+Previous class: [BaseDataTransformer](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/DataTransformer/BaseDataTransformer.md)<br>Next class: [ChloroformException](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Exception/ChloroformException.md)<br>

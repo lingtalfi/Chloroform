@@ -5,6 +5,7 @@ namespace Ling\Chloroform\Form;
 
 
 use Ling\Bat\BDotTool;
+use Ling\Chloroform\DataTransformer\DataTransformerInterface;
 use Ling\Chloroform\Exception\ChloroformException;
 use Ling\Chloroform\Field\FieldInterface;
 use Ling\Chloroform\Field\FormAwareFieldInterface;

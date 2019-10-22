@@ -828,6 +828,10 @@ Here is a list of known chloroform renderers:
 History Log
 =============
 
+- 1.17.1 -- 2019-10-22
+
+    - add BaseDataTransformer class
+    
 - 1.17.0 -- 2019-10-22
 
     - update "very important data" concept

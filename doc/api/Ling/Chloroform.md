@@ -8,6 +8,9 @@ Ling/Chloroform
 Table of contents
 ===========
 
+- [BaseDataTransformer](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/DataTransformer/BaseDataTransformer.md) &ndash; The BaseDataTransformer class.
+    - [BaseDataTransformer::create](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/DataTransformer/BaseDataTransformer/create.md) &ndash; Returns a new instance of the class being invoked.
+    - [DataTransformerInterface::transform](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/DataTransformer/DataTransformerInterface/transform.md) &ndash; Transforms the given value if necessary.
 - [DataTransformerInterface](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/DataTransformer/DataTransformerInterface.md) &ndash; The DataTransformerInterface interface.
     - [DataTransformerInterface::transform](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/DataTransformer/DataTransformerInterface/transform.md) &ndash; Transforms the given value if necessary.
 - [ChloroformException](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Exception/ChloroformException.md) &ndash; The ChloroformException class.
