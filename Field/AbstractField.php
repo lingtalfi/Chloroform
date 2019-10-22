@@ -75,6 +75,11 @@ abstract class AbstractField implements FieldInterface
     protected $properties;
 
 
+    /**
+     * This property holds the hasVeryImportantData for this instance.
+     * @var bool = true
+     */
+    protected $hasVeryImportantData;
 
     /**
      * Builds the AbstractField instance.
@@ -125,6 +130,7 @@ abstract class AbstractField implements FieldInterface
         }
         $this->errors = [];
         $this->validators = [];
+        $this->hasVeryImportantData = true;
     }
 
 
@@ -237,6 +243,27 @@ abstract class AbstractField implements FieldInterface
             "validators" => $validators,
         ]);
     }
+
+    /**
+     * @implementation
+     */
+    public function hasVeryImportantData(): bool
+    {
+        return $this->hasVeryImportantData;
+    }
+
+
+    /**
+     * @implementation
+     */
+    public function setHasVeryImportantData(bool $hasVeryImportantData): FieldInterface
+    {
+        $this->hasVeryImportantData = $hasVeryImportantData;
+        return $this;
+    }
+
+
+
 
     //--------------------------------------------
     //

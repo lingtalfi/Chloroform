@@ -66,7 +66,7 @@ class Chloroform
         $this->notifications = [];
         $this->_postedData = null;
         $this->formId = "chloroform_one";
-        $this->addField(HiddenField::create("chloroform_hidden_key", ['value' => $this->formId]));
+        $this->addField(HiddenField::create("chloroform_hidden_key", ['value' => $this->formId])->setHasVeryImportantData(false));
         $this->_isPosted = false;
 
     }
@@ -151,6 +151,27 @@ class Chloroform
 
         return $validates;
     }
+
+
+    /**
+     * Returns the @page(very important data) of a form.
+     *
+     * @return array
+     */
+    public function getVeryImportantData(): array
+    {
+        $veryImportantData = $this->getPostedData();
+        foreach ($this->fields as $id => $field) {
+            if (false === $field->hasVeryImportantData()) {
+                BDotTool::unsetDotValue($id, $veryImportantData);
+            }
+        }
+        return $veryImportantData;
+    }
+
+//    public function executeDataTransformers(array &$postedData){
+//
+//    }
 
     /**
      * Returns the fields of this instance.

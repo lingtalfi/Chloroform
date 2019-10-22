@@ -11,6 +11,7 @@ Summary
     - [Formatting/transforming form values](#formattingtransforming-field-values)
 - [The posted data](#the-posted-data)
 - [The isPosted method and form concurrency](#the-isposted-method-and-form-concurrency)
+- [The concept of very important data](#the-concept-of-very-important-data)
 - [The Chloroform synopsis](#the-chloroform-synopsis)
 
 
@@ -130,6 +131,35 @@ I remember that in the past, I used to create a hidden field with a unique name 
 whether that field was posted.
 
 The default isPosted method will just check whether the postedData are not empty.
+
+
+
+
+The concept of very important data
+===============
+2019-10-22
+
+When we post a form, we usually want to do something with the posted data.
+For instance, update the database, or send an email.
+
+So this data that we use I call it very important data.
+
+However, not all the posted data is very important, some of the posted data, for instance:
+
+- some posted data is just used to check whether this particular form (i.e. with a particular form id) was posted (and not another form)
+- some posted data is just used to check whether a csrf token is valid
+
+We don't need that kind of data in the end, when updating the database or sending an email,
+and so this I call not very important data.
+
+
+Now in chloroform, I believed it would have been useful to be able to get those very important data only.
+So, now Chloroform has a new method called **getVeryImportantData**, and each field has the **setHasVeryImportantData** and **hasVeryImportantData** methods
+to help implementing this idea. 
+
+As for now, the hasVeryImportantData is handled internally and will not be exposed in the [form array](https://github.com/lingtalfi/Chloroform/blob/master/doc/pages/chloroform-array.md),
+because I'm not sure that would be a good idea, maybe it's just some parasite info we don't need to have in the array? 
+
 
 
 

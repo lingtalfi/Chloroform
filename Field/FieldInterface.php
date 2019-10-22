@@ -100,4 +100,19 @@ interface FieldInterface
      * @return array
      */
     public function toArray(): array;
+
+
+    /**
+     * Returns whether this field contains @page(very important data).
+     * @return bool
+     */
+    public function hasVeryImportantData(): bool;
+
+    /**
+     * Sets whether this field contains @page(very important data).
+     *
+     * @param bool $hasVeryImportantData
+     * @return $this
+     */
+    public function setHasVeryImportantData(bool $hasVeryImportantData): FieldInterface;
 }

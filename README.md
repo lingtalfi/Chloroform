@@ -688,6 +688,10 @@ Here is a list of known chloroform renderers:
 History Log
 =============
 
+- 1.15.0 -- 2019-10-22
+
+    - add concept of "very important data"
+    
 - 1.14.2 -- 2019-10-21
 
     - add AbstractValidator->getDefaultMessagesDir
