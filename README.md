@@ -812,6 +812,7 @@ Here is a list of known chloroform renderers:
 
 - [Chloroform_HydrogenRenderer](https://github.com/lingtalfi/Chloroform_HydrogenRenderer)
 - [Chloroform_HeliumRenderer](https://github.com/lingtalfi/Chloroform_HeliumRenderer)
+- [Chloroform_HeliumLightRenderer](https://github.com/lingtalfi/Chloroform_HeliumLightRenderer)
 
 
 
@@ -828,6 +829,10 @@ Here is a list of known chloroform renderers:
 History Log
 =============
 
+- 1.17.2 -- 2019-10-24
+
+    - add link in README.md
+    
 - 1.17.1 -- 2019-10-22
 
     - add BaseDataTransformer class
