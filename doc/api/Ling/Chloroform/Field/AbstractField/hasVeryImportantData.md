@@ -46,7 +46,7 @@ Returns bool.
 
 Source Code
 ===========
-See the source code for method [AbstractField::hasVeryImportantData](https://github.com/lingtalfi/Chloroform/blob/master/Field/AbstractField.php#L248-L251)
+See the source code for method [AbstractField::hasVeryImportantData](https://github.com/lingtalfi/Chloroform/blob/master/Field/AbstractField.php#L264-L267)
 
 
 See Also

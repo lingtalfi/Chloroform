@@ -86,6 +86,15 @@ interface FieldInterface
      */
     public function getValue();
 
+    /**
+     * Returns the fallback value, which defaults to null.
+     * See the @page(conception notes) for more details about the fallback value.
+     *
+     * @return mixed
+     */
+    public function getFallbackValue();
+
+
 
     /**
      * Returns the array representation of the field.

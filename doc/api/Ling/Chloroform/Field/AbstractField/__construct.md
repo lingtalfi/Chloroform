@@ -67,7 +67,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [AbstractField::__construct](https://github.com/lingtalfi/Chloroform/blob/master/Field/AbstractField.php#L117-L142)
+See the source code for method [AbstractField::__construct](https://github.com/lingtalfi/Chloroform/blob/master/Field/AbstractField.php#L124-L150)
 
 
 See Also

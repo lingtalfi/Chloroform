@@ -38,6 +38,11 @@ Return values
 Returns array.
 
 
+Exceptions thrown
+================
+
+- [Exception](http://php.net/manual/en/class.exception.php).&nbsp;
+
 
 
 
@@ -46,7 +51,7 @@ Returns array.
 
 Source Code
 ===========
-See the source code for method [Chloroform::getVeryImportantData](https://github.com/lingtalfi/Chloroform/blob/master/Form/Chloroform.php#L168-L178)
+See the source code for method [Chloroform::getVeryImportantData](https://github.com/lingtalfi/Chloroform/blob/master/Form/Chloroform.php#L162-L174)
 
 
 See Also

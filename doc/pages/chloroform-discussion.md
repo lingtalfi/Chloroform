@@ -194,6 +194,48 @@ as it's an internal feature, and the **form array** is intended to be processed 
 
 
 
+The validates method and the fallback value
+===================
+2019-11-01
+
+
+I struggled until today with this concept of validates method, but today I think I've got it right.
+
+So here is what the validates method do.
+
+
+When the form is posted, all fields values are updated.
+
+If the value is found in the posted data (POST+FILES), then the posted value becomes the new field value.
+
+Otherwise, if the value is not found in the posted data, then the field takes the **fallback value**, which defaults to null.
+
+The developer can override the **fallback value** at the field level.
+
+This design has been deliberately chosen, so that if you have a checkboxField for instance, when the form is posted and if the
+user didn't check any checkboxes, then you have a value to check against.
+
+Note, and it's important, that with this specific design, if there were some default checkboxes ticked, and the user unchecked them all,
+you still get the **fallback** value. This is important to understand because it emphasizes the difference between the default value (some checkboxes
+checked by default for instance), and the fallback value (the **generated** value once the form is posted).
+
+
+With all that said, back to the validates method.
+
+So the validates method basically takes the posted data (POST+FILES), and injects the posted data value (or the fallback value if not set) in the field.
+
+Then, once the fields are correctly "prepared", it triggers the validators associated with each field, and eventually returns a boolean, which is true only if 
+all fields have validated.
+
+
+Note that the fallback value doesn't appear in the [chloroform array](https://github.com/lingtalfi/Chloroform/blob/master/doc/pages/chloroform-array.md), 
+because it's handled internally and eventually a fallback value becomes the actual field value. 
+
+
+
+
+
+
 
 The Chloroform synopsis
 ==========

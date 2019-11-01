@@ -829,6 +829,10 @@ Here is a list of known chloroform renderers:
 History Log
 =============
 
+- 1.19.0 -- 2019-11-01
+
+    - add the concept of fallback value
+    
 - 1.18.0 -- 2019-11-01
 
     - add FieldInterface->setDataTransformer

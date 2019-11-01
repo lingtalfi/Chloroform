@@ -54,6 +54,13 @@ abstract class AbstractField implements FieldInterface
 
 
     /**
+     * This property holds the fallbackValue for this instance.
+     * @var mixed|null
+     */
+    protected $fallbackValue;
+
+
+    /**
      * This property holds the errors for this instance.
      *
      * An array of error messages (each being a string).
@@ -124,6 +131,7 @@ abstract class AbstractField implements FieldInterface
         $this->label = $properties['label'] ?? null;
         $this->hint = $properties['hint'] ?? null;
         $this->value = $properties['value'] ?? null;
+        $this->fallbackValue = $properties['fallbackValue'] ?? null;
         if (array_key_exists("id", $properties)) {
             $this->id = $properties['id'];
         } else {
@@ -208,13 +216,21 @@ abstract class AbstractField implements FieldInterface
         return $this;
     }
 
-
     /**
      * @implementation
      */
     public function getValue()
     {
         return $this->value;
+    }
+
+
+    /**
+     * @implementation
+     */
+    public function getFallbackValue()
+    {
+        return $this->fallbackValue;
     }
 
 
@@ -285,6 +301,17 @@ abstract class AbstractField implements FieldInterface
         $this->id = $id;
         return $this;
     }
+
+    /**
+     * Sets the fallbackValue.
+     *
+     * @param mixed|null $fallbackValue
+     */
+    public function setFallbackValue($fallbackValue)
+    {
+        $this->fallbackValue = $fallbackValue;
+    }
+
 
     /**
      * Sets the label.
