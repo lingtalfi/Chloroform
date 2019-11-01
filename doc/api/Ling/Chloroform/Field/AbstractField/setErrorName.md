@@ -49,7 +49,7 @@ Returns [AbstractField](https://github.com/lingtalfi/Chloroform/blob/master/doc/
 
 Source Code
 ===========
-See the source code for method [AbstractField::setErrorName](https://github.com/lingtalfi/Chloroform/blob/master/Field/AbstractField.php#L312-L316)
+See the source code for method [AbstractField::setErrorName](https://github.com/lingtalfi/Chloroform/blob/master/Field/AbstractField.php#L319-L323)
 
 
 See Also

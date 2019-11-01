@@ -259,7 +259,14 @@ abstract class AbstractField implements FieldInterface
     }
 
 
-
+    /**
+     * @implementation
+     */
+    public function setDataTransformer(DataTransformerInterface $dataTransformer): FieldInterface
+    {
+        $this->dataTransformer = $dataTransformer;
+        return $this;
+    }
 
 
 
@@ -328,17 +335,7 @@ abstract class AbstractField implements FieldInterface
         return $this;
     }
 
-    /**
-     * Sets the dataTransformer.
-     *
-     * @param DataTransformerInterface $dataTransformer
-     * @return $this
-     */
-    public function setDataTransformer(DataTransformerInterface $dataTransformer): self
-    {
-        $this->dataTransformer = $dataTransformer;
-        return $this;
-    }
+
 
 
 

@@ -30,6 +30,16 @@ interface FieldInterface
     public function addValidator(ValidatorInterface $validator);
 
 
+
+    /**
+     * Sets the dataTransformer for this field.
+     *
+     * @param DataTransformerInterface $dataTransformer
+     * @return FieldInterface
+     */
+    public function setDataTransformer(DataTransformerInterface $dataTransformer): FieldInterface;
+
+
     /**
      * Tests and returns whether every validator attached to this instanced passed.
      *

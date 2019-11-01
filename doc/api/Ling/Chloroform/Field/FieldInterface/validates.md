@@ -52,7 +52,7 @@ Returns bool.
 
 Source Code
 ===========
-See the source code for method [FieldInterface::validates](https://github.com/lingtalfi/Chloroform/blob/master/Field/FieldInterface.php#L47-L47)
+See the source code for method [FieldInterface::validates](https://github.com/lingtalfi/Chloroform/blob/master/Field/FieldInterface.php#L57-L57)
 
 
 See Also
@@ -60,5 +60,5 @@ See Also
 
 The [FieldInterface](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/FieldInterface.md) class.
 
-Previous method: [addValidator](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/FieldInterface/addValidator.md)<br>Next method: [getErrors](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/FieldInterface/getErrors.md)<br>
+Previous method: [setDataTransformer](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/FieldInterface/setDataTransformer.md)<br>Next method: [getErrors](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/FieldInterface/getErrors.md)<br>
 

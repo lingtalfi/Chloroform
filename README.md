@@ -829,6 +829,10 @@ Here is a list of known chloroform renderers:
 History Log
 =============
 
+- 1.18.0 -- 2019-11-01
+
+    - add FieldInterface->setDataTransformer
+    
 - 1.17.2 -- 2019-10-24
 
     - add link in README.md
