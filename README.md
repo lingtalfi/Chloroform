@@ -829,6 +829,10 @@ Here is a list of known chloroform renderers:
 History Log
 =============
 
+- 1.19.1 -- 2019-11-15
+
+    - add precision to chloroform array documentation page
+    
 - 1.19.0 -- 2019-11-01
 
     - add the concept of fallback value

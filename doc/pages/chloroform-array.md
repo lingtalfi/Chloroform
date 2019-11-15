@@ -27,6 +27,7 @@ It has the following structure:
                     - htmlName: string            # the html name (often used in the name attribute of html tags)
                     - errors: array               # the error messages. Each error message is a string.
                     - className: string           # the name of the field class (this is addressed to renderers, so that they know how to render the field)
+                    - ...other properties might be added, depending on your field
 
 - errors: array. A summary of the form errors (for the templates to use).
                 It's actually nothing more than the fields errors put altogether here. 
