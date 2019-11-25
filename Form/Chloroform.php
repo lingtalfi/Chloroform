@@ -304,6 +304,18 @@ class Chloroform
         $this->properties[$key] = $value;
     }
 
+
+    /**
+     * Returns whether the property identified by the given key exists.
+     *
+     * @param string $key
+     * @return bool
+     */
+    public function hasProperty(string $key): bool
+    {
+        return array_key_exists($key, $this->properties);
+    }
+
     /**
      * Returns the value of the property identified by the given key, or the default value otherwise.
      *
