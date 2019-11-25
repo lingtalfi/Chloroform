@@ -829,6 +829,10 @@ Here is a list of known chloroform renderers:
 History Log
 =============
 
+- 1.19.3 -- 2019-11-25
+
+    - add AjaxFileBoxField->getFallbackValue method override
+    
 - 1.19.2 -- 2019-11-18
 
     - change documentation link

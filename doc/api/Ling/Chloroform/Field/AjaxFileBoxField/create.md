@@ -61,5 +61,5 @@ See Also
 
 The [AjaxFileBoxField](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/AjaxFileBoxField.md) class.
 
-
+Next method: [getFallbackValue](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/AjaxFileBoxField/getFallbackValue.md)<br>
 

@@ -93,4 +93,17 @@ class AjaxFileBoxField extends AbstractField
         $properties = array_replace($defaultValues, $properties);
         return new static($properties);
     }
+
+    /**
+     * @overrides
+     */
+    public function getFallbackValue()
+    {
+        if ($this->properties['maxFile'] <= 1) {
+            return '';
+        }
+        return [];
+    }
+
+
 }
