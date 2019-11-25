@@ -30,6 +30,9 @@ It has the following structure:
                     - ...other properties might be added, depending on your field
 
 - errors: array. A summary of the form errors (for the templates to use).
-                It's actually nothing more than the fields errors put altogether here. 
+                It's actually nothing more than the fields errors put altogether here.
+
+- properties: array. An array of custom key/value pairs for the developers to use. I originally created this to implement the  
+        [iframe signal technique](https://github.com/lingtalfi/TheBar/blob/master/discussions/iframe-signal.md).
 
 ```

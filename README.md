@@ -133,7 +133,7 @@ array(1) {
 }
 
 // a($formArray)
-array(4) {
+array(5) {
   ["isPosted"] => bool(true)
   ["notifications"] => array(1) {
     [0] => array(2) {
@@ -170,6 +170,8 @@ array(4) {
     }
   }
   ["errors"] => array(0) {
+  }
+  ["properties"] => array(0) {
   }
 }
 
@@ -235,7 +237,7 @@ a($formArray);
 The toArray method will output something like this (after submitting the form without typing anything):
 
 ```html
-array(4) {
+array(5) {
   ["isPosted"] => bool(false)
   ["notifications"] => array(1) {
     [0] => array(2) {
@@ -259,6 +261,8 @@ array(4) {
     }
   }
   ["errors"] => array(0) {
+  }
+  ["properties"] => array(0) {
   }
 }
 
@@ -328,7 +332,7 @@ a($formArray);
 The toArray method will output something like this (after submitting the form without typing anything):
 
 ```html
-array(4) {
+array(5) {
   ["isPosted"] => bool(false)
   ["notifications"] => array(1) {
     [0] => array(2) {
@@ -359,6 +363,8 @@ array(4) {
     ["first_name"] => array(1) {
       [0] => string(14) "Nul, t'es nul!"
     }
+  }
+  ["properties"] => array(0) {
   }
 }
 
@@ -421,7 +427,7 @@ The toArray method will output something like this (after submitting the form wi
 
 
 ```html
-array(4) {
+array(5) {
   ["isPosted"] => bool(false)
   ["notifications"] => array(1) {
     [0] => array(2) {
@@ -471,6 +477,8 @@ array(4) {
       [0] => string(26) "The first name is required"
       [1] => string(64) "The first name must contain at least 3 chars (you wrote 0 chars)"
     }
+  }
+  ["properties"] => array(0) {
   }
 }
 
@@ -536,7 +544,7 @@ The toArray method will output something like this (after submitting the form wi
 
 ```html
 
-array(4) {
+array(5) {
   ["isPosted"] => bool(false)
   ["notifications"] => array(1) {
     [0] => array(2) {
@@ -577,6 +585,8 @@ array(4) {
     ["first_name"] => array(1) {
       [0] => string(48) "Yo, the first name must contain at least 3 chars"
     }
+  }
+  ["properties"] => array(0) {
   }
 }
 
@@ -642,7 +652,7 @@ The toArray method will output something like this (after submitting the form wi
 
 
 ```html
-array(4) {
+array(5) {
   ["isPosted"] => bool(false)
   ["notifications"] => array(1) {
     [0] => array(2) {
@@ -674,6 +684,8 @@ array(4) {
     }
   }
   ["errors"] => array(0) {
+  }
+  ["properties"] => array(0) {
   }
 }
 
@@ -715,7 +727,7 @@ the resulting chloroform array will look like this:
 
 
 ```html 
-array(4) {
+array(5) {
   ["isPosted"] => bool(true)
   ["notifications"] => array(1) {
     [0] => array(2) {
@@ -744,6 +756,8 @@ array(4) {
       }
     }
   ["errors"] => array(0) {
+  }
+  ["properties"] => array(0) {
   }
 }
 
@@ -828,6 +842,10 @@ Here is a list of known chloroform renderers:
 
 History Log
 =============
+
+- 1.20.0 -- 2019-11-25
+
+    - add Chloroform.properties 
 
 - 1.19.3 -- 2019-11-25
 

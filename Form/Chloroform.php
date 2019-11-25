@@ -50,6 +50,15 @@ class Chloroform
      */
     protected $formId;
 
+    /**
+     * This property holds the properties for this instance.
+     * This is an array of custom properties for the developer to use.
+     * I added this so that I could implement an @page(iframe-signal system).
+     *
+     * @var array
+     */
+    protected $properties;
+
 
     /**
      * Builds the Chloroform instance.
@@ -58,6 +67,7 @@ class Chloroform
     {
         $this->fields = [];
         $this->notifications = [];
+        $this->properties = [];
         $this->_postedData = null;
         $this->formId = "chloroform_one";
         $this->addField(HiddenField::create("chloroform_hidden_key", ['value' => $this->formId])->setHasVeryImportantData(false));
@@ -284,6 +294,33 @@ class Chloroform
 
 
     /**
+     * Sets a property.
+     *
+     * @param string $key
+     * @param $value
+     */
+    public function setProperty(string $key, $value)
+    {
+        $this->properties[$key] = $value;
+    }
+
+    /**
+     * Returns the value of the property identified by the given key, or the default value otherwise.
+     *
+     * @param string $key
+     * @param null $default
+     * @return mixed
+     */
+    public function getProperty(string $key, $default = null)
+    {
+        if (array_key_exists($key, $this->properties)) {
+            return $this->properties[$key];
+        }
+        return $default;
+    }
+
+
+    /**
      * Returns the array version (template friendly) of the form.
      *
      * The blueprint looks like this:
@@ -344,6 +381,7 @@ class Chloroform
             "notifications" => $notificationsDetails,
             "fields" => $fieldsDetails,
             "errors" => $errors,
+            "properties" => $this->properties,
         ];
     }
 
