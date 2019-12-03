@@ -49,7 +49,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [Chloroform::addNotification](https://github.com/lingtalfi/Chloroform/blob/master/Form/Chloroform.php#L280-L283)
+See the source code for method [Chloroform::addNotification](https://github.com/lingtalfi/Chloroform/blob/master/Form/Chloroform.php#L278-L281)
 
 
 See Also

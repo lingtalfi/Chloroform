@@ -843,6 +843,10 @@ Here is a list of known chloroform renderers:
 History Log
 =============
 
+- 1.20.2 -- 2019-12-03
+
+    - add documentation comment in chloroform discussion 
+    
 - 1.20.1 -- 2019-11-25
 
     - add Chloroform->hasProperty method 

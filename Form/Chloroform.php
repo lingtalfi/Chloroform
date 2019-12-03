@@ -259,8 +259,6 @@ class Chloroform
      */
     public function addField(FieldInterface $field, array $validators = [])
     {
-
-
         if ($field instanceof FormAwareFieldInterface) {
             $field->setForm($this);
         }
