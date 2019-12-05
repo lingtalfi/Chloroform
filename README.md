@@ -749,6 +749,10 @@ Here is a list of known chloroform renderers:
 History Log
 =============
 
+- 1.22.0 -- 2019-12-05
+
+    - add Chloroform getMode method 
+    
 - 1.21.0 -- 2019-12-05
 
     - add form.mode property 

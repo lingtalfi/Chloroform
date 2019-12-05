@@ -49,7 +49,7 @@ Returns bool.
 
 Source Code
 ===========
-See the source code for method [Chloroform::hasProperty](https://github.com/lingtalfi/Chloroform/blob/master/Form/Chloroform.php#L341-L344)
+See the source code for method [Chloroform::hasProperty](https://github.com/lingtalfi/Chloroform/blob/master/Form/Chloroform.php#L353-L356)
 
 
 See Also

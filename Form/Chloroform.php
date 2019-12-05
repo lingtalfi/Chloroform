@@ -248,6 +248,18 @@ class Chloroform
     }
 
     /**
+     * Returns the mode of this instance.
+     *
+     * @return string
+     */
+    public function getMode(): string
+    {
+        return $this->mode;
+    }
+
+
+
+    /**
      * Inject the given values in the corresponding fields.
      * This method is typically used in an update form, to have the first instantiation of your form filled
      * with the "old" values.

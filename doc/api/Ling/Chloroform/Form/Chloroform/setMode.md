@@ -49,7 +49,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [Chloroform::setMode](https://github.com/lingtalfi/Chloroform/blob/master/Form/Chloroform.php#L329-L332)
+See the source code for method [Chloroform::setMode](https://github.com/lingtalfi/Chloroform/blob/master/Form/Chloroform.php#L341-L344)
 
 
 See Also
