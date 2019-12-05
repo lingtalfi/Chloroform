@@ -4,7 +4,7 @@
 
 The Chloroform class
 ================
-2019-04-10 --> 2019-12-03
+2019-04-10 --> 2019-12-05
 
 
 
@@ -30,6 +30,7 @@ class <span class="pl-k">Chloroform</span>  {
     - private array [$_postedData](#property-_postedData) ;
     - protected string [$formId](#property-formId) ;
     - protected array [$properties](#property-properties) ;
+    - protected string [$mode](#property-mode) ;
 
 - Methods
     - public [__construct](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Form/Chloroform/__construct.md)() : void
@@ -46,6 +47,7 @@ class <span class="pl-k">Chloroform</span>  {
     - public [addNotification](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Form/Chloroform/addNotification.md)([Ling\Chloroform\FormNotification\FormNotificationInterface](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/FormNotification/FormNotificationInterface.md) $notification) : void
     - public [getNotifications](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Form/Chloroform/getNotifications.md)() : [FormNotificationInterface[]](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/FormNotification/FormNotificationInterface.md)
     - public [setProperty](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Form/Chloroform/setProperty.md)(string $key, $value) : void
+    - public [setMode](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Form/Chloroform/setMode.md)(string $mode) : void
     - public [hasProperty](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Form/Chloroform/hasProperty.md)(string $key) : bool
     - public [getProperty](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Form/Chloroform/getProperty.md)(string $key, ?$default = null) : mixed
     - public [toArray](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Form/Chloroform/toArray.md)() : array
@@ -94,6 +96,21 @@ Properties
     
     
 
+- <span id="property-mode"><b>mode</b></span>
+
+    This property holds the mode for this instance.
+    The possible values are:
+    
+    - insert
+    - update
+    - not_set (default)
+    
+    I found out that some of the field renderer need to know whether the form is in update or insert mode.
+    Using the form mode is not an obligation (hence the default value of not_set), however I recommend using it
+    as it eases development for everybody (I believe).
+    
+    
+
 
 
 Methods
@@ -113,6 +130,7 @@ Methods
 - [Chloroform::addNotification](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Form/Chloroform/addNotification.md) &ndash; Adds a notification to this instance.
 - [Chloroform::getNotifications](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Form/Chloroform/getNotifications.md) &ndash; Returns the notifications of this instance.
 - [Chloroform::setProperty](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Form/Chloroform/setProperty.md) &ndash; Sets a property.
+- [Chloroform::setMode](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Form/Chloroform/setMode.md) &ndash; Sets the mode.
 - [Chloroform::hasProperty](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Form/Chloroform/hasProperty.md) &ndash; Returns whether the property identified by the given key exists.
 - [Chloroform::getProperty](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Form/Chloroform/getProperty.md) &ndash; Returns the value of the property identified by the given key, or the default value otherwise.
 - [Chloroform::toArray](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Form/Chloroform/toArray.md) &ndash; Returns the array version (template friendly) of the form.

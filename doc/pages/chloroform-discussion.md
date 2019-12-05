@@ -242,7 +242,7 @@ The Chloroform synopsis
 2019-04-10 -> 2019-12-03
 
 
-And so having discussed all that, here is my final version (so far) of the chloroform synopsis:
+And so having discussed all that, here is my final version (so far) of the chloroform synopsis (omitting the form.mode for now):
 
 
 ```php

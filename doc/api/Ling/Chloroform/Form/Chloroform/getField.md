@@ -54,7 +54,7 @@ Exceptions thrown
 
 Source Code
 ===========
-See the source code for method [Chloroform::getField](https://github.com/lingtalfi/Chloroform/blob/master/Form/Chloroform.php#L223-L229)
+See the source code for method [Chloroform::getField](https://github.com/lingtalfi/Chloroform/blob/master/Form/Chloroform.php#L242-L248)
 
 
 See Also

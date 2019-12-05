@@ -53,7 +53,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [Chloroform::addField](https://github.com/lingtalfi/Chloroform/blob/master/Form/Chloroform.php#L260-L270)
+See the source code for method [Chloroform::addField](https://github.com/lingtalfi/Chloroform/blob/master/Form/Chloroform.php#L279-L289)
 
 
 See Also

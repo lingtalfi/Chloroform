@@ -32,7 +32,7 @@ Summary
     - [Example #2: a simple form with custom validation](#example-2-a-simple-form-with-custom-validation)
     - [Example #3: a simple form with validation](#example-3-a-simple-form-with-validation)
     - [Example #4: Changing the validation error message](#example-4-changing-the-validation-error-message)
-    - [Example #5: CSRF protection](#example-5-csrf-protection)
+    - [Example #5: The file field](#example-5-the-file-field)
 - [The available fields](#the-available-fields)    
 - [The available validators](#the-available-validators)    
 - [Rendering the form](#rendering-the-form)    
@@ -133,7 +133,7 @@ array(1) {
 }
 
 // a($formArray)
-array(5) {
+array(6) {
   ["isPosted"] => bool(true)
   ["notifications"] => array(1) {
     [0] => array(2) {
@@ -173,6 +173,7 @@ array(5) {
   }
   ["properties"] => array(0) {
   }
+  ["mode"] => string(7) "not_set"
 }
 
 
@@ -237,7 +238,7 @@ a($formArray);
 The toArray method will output something like this (after submitting the form without typing anything):
 
 ```html
-array(5) {
+array(6) {
   ["isPosted"] => bool(false)
   ["notifications"] => array(1) {
     [0] => array(2) {
@@ -264,6 +265,7 @@ array(5) {
   }
   ["properties"] => array(0) {
   }
+  ["mode"] => string(7) "not_set"
 }
 
 ```
@@ -332,7 +334,7 @@ a($formArray);
 The toArray method will output something like this (after submitting the form without typing anything):
 
 ```html
-array(5) {
+array(6) {
   ["isPosted"] => bool(false)
   ["notifications"] => array(1) {
     [0] => array(2) {
@@ -366,6 +368,7 @@ array(5) {
   }
   ["properties"] => array(0) {
   }
+  ["mode"] => string(7) "not_set"
 }
 
 ```
@@ -427,7 +430,7 @@ The toArray method will output something like this (after submitting the form wi
 
 
 ```html
-array(5) {
+array(6) {
   ["isPosted"] => bool(false)
   ["notifications"] => array(1) {
     [0] => array(2) {
@@ -480,6 +483,7 @@ array(5) {
   }
   ["properties"] => array(0) {
   }
+  ["mode"] => string(7) "not_set"
 }
 
 
@@ -544,7 +548,7 @@ The toArray method will output something like this (after submitting the form wi
 
 ```html
 
-array(5) {
+array(6) {
   ["isPosted"] => bool(false)
   ["notifications"] => array(1) {
     [0] => array(2) {
@@ -588,6 +592,7 @@ array(5) {
   }
   ["properties"] => array(0) {
   }
+  ["mode"] => string(7) "not_set"
 }
 
 ```
@@ -596,113 +601,13 @@ array(5) {
 
 
 
-Example #5: CSRF protection
+
+
+
+Example #5: the file field
 --------------
 
-With the following code:
-
-```php
-//--------------------------------------------
-// Creating the form
-//--------------------------------------------
-$form = new Chloroform();
-$form->addField(CSRFField::create("csrf_token"), [CSRFValidator::create()]);
-
-
-//--------------------------------------------
-// Posting the form and validating data
-//--------------------------------------------
-if (true === $form->isPosted()) {
-    if (true === $form->validates()) {
-        $form->addNotification(SuccessFormNotification::create("ok"));
-        // do something with $postedData;
-        $postedData = $form->getPostedData();
-    } else {
-        $form->addNotification(ErrorFormNotification::create("There was a problem."));
-    }
-} else {
-    $valuesFromDb = []; // get the values from the database if necessary...
-    $form->injectValues($valuesFromDb);
-}
-
-
-//--------------------------------------------
-// Template part
-//--------------------------------------------
-$formArray = $form->toArray();
-a($formArray);
-
-
-?>
-    <form method="post" action="">
-        <label>
-            CSRF token (usually would be hidden)
-            <input type="text" name="csrf_token" value="<?php echo $formArray['fields']['csrf_token']['value']; ?>"/>
-        </label>
-
-        <input type="submit" value="Submit"/>
-        <?php ChloroformRendererHelper::printsFormIdKeyControl($formArray); ?>
-    </form>
-<?php
-
-```
-
-
-The toArray method will output something like this (after submitting the form without typing anything):
-
-
-```html
-array(5) {
-  ["isPosted"] => bool(false)
-  ["notifications"] => array(1) {
-    [0] => array(2) {
-      ["type"] => string(7) "success"
-      ["message"] => string(2) "ok"
-    }
-  }
-  ["fields"] => array(1) {
-    ["csrf_token"] => array(9) {
-      ["id"] => string(10) "csrf_token"
-      ["label"] => NULL
-      ["hint"] => NULL
-      ["errorName"] => string(10) "csrf token"
-      ["value"] => string(32) "3db08f533513eb1554dce7fcbc6cca30"
-      ["htmlName"] => string(10) "csrf_token"
-      ["errors"] => array(0) {
-      }
-      ["className"] => string(31) "Ling\Chloroform\Field\CSRFField"
-      ["validators"] => array(1) {
-        [0] => array(3) {
-          ["name"] => string(39) "Ling\Chloroform\Validator\CSRFValidator"
-          ["custom_messages"] => array(0) {
-          }
-          ["messages"] => array(1) {
-            [0] => string(33) "main: The CSRF token is corrupted"
-          }
-        }
-      }
-    }
-  }
-  ["errors"] => array(0) {
-  }
-  ["properties"] => array(0) {
-  }
-}
-
-
-
-
-```
-
-
-
-
-
-
-Example #6: the input field
---------------
-
-Input fields are special in that the value returned is the php file item provided in the $_FILES super array (the one
+File fields are special in that the value returned is the php file item provided in the $_FILES super array (the one
 with the following entries: name, type, tmp_name, size and error).
 
 In other words, if you have a chloroform instance with a file field, like this:
@@ -727,7 +632,7 @@ the resulting chloroform array will look like this:
 
 
 ```html 
-array(5) {
+array(6) {
   ["isPosted"] => bool(true)
   ["notifications"] => array(1) {
     [0] => array(2) {
@@ -759,6 +664,7 @@ array(5) {
   }
   ["properties"] => array(0) {
   }
+  ["mode"] => string(7) "not_set"
 }
 
 ```
@@ -843,6 +749,10 @@ Here is a list of known chloroform renderers:
 History Log
 =============
 
+- 1.21.0 -- 2019-12-05
+
+    - add form.mode property 
+    
 - 1.20.2 -- 2019-12-03
 
     - add documentation comment in chloroform discussion 

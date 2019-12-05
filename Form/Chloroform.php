@@ -59,6 +59,24 @@ class Chloroform
      */
     protected $properties;
 
+    /**
+     * This property holds the mode for this instance.
+     * The possible values are:
+     *
+     * - insert
+     * - update
+     * - not_set (default)
+     *
+     * I found out that some of the field renderer need to know whether the form is in update or insert mode.
+     * Using the form mode is not an obligation (hence the default value of not_set), however I recommend using it
+     * as it eases development for everybody (I believe).
+     *
+     *
+     *
+     * @var string
+     */
+    protected $mode;
+
 
     /**
      * Builds the Chloroform instance.
@@ -69,6 +87,7 @@ class Chloroform
         $this->notifications = [];
         $this->properties = [];
         $this->_postedData = null;
+        $this->mode = 'not_set';
         $this->formId = "chloroform_one";
         $this->addField(HiddenField::create("chloroform_hidden_key", ['value' => $this->formId])->setHasVeryImportantData(false));
 
@@ -302,6 +321,16 @@ class Chloroform
         $this->properties[$key] = $value;
     }
 
+    /**
+     * Sets the mode.
+     *
+     * @param string $mode
+     */
+    public function setMode(string $mode)
+    {
+        $this->mode = $mode;
+    }
+
 
     /**
      * Returns whether the property identified by the given key exists.
@@ -392,6 +421,7 @@ class Chloroform
             "fields" => $fieldsDetails,
             "errors" => $errors,
             "properties" => $this->properties,
+            "mode" => $this->mode,
         ];
     }
 

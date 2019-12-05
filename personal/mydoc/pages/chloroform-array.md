@@ -34,5 +34,11 @@ It has the following structure:
 
 - properties: array. An array of custom key/value pairs for the developers to use. I originally created this to implement the  
         [iframe signal technique](https://github.com/lingtalfi/TheBar/blob/master/discussions/iframe-signal.md).
+- mode: string. One of:
+        - insert
+        - update
+        - not_set (default value)
+        You can set the mode (and I recommend it) to insert/update to help some field renderers to do their job.
+        Or don't use it and use your own heuristics...
 
 ```
