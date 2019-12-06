@@ -49,7 +49,7 @@ Returns [FieldInterface](https://github.com/lingtalfi/Chloroform/blob/master/doc
 
 Source Code
 ===========
-See the source code for method [DecorativeField::setDataTransformer](https://github.com/lingtalfi/Chloroform/blob/master/Field/DecorativeField.php#L90-L94)
+See the source code for method [DecorativeField::setDataTransformer](https://github.com/lingtalfi/Chloroform/blob/master/Field/DecorativeField.php#L98-L102)
 
 
 See Also

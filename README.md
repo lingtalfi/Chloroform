@@ -750,6 +750,10 @@ Here is a list of known chloroform renderers:
 History Log
 =============
 
+- 1.23.3 -- 2019-12-06
+
+    - add DecorativeField.$decorationOptions 
+    
 - 1.23.2 -- 2019-12-06
 
     - update DecorativeField->getType to getDecorationType 

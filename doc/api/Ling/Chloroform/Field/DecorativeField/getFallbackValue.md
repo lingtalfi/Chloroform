@@ -47,7 +47,7 @@ Returns mixed.
 
 Source Code
 ===========
-See the source code for method [DecorativeField::getFallbackValue](https://github.com/lingtalfi/Chloroform/blob/master/Field/DecorativeField.php#L131-L134)
+See the source code for method [DecorativeField::getFallbackValue](https://github.com/lingtalfi/Chloroform/blob/master/Field/DecorativeField.php#L139-L142)
 
 
 See Also

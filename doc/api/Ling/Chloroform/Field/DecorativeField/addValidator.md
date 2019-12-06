@@ -49,7 +49,7 @@ Returns mixed.
 
 Source Code
 ===========
-See the source code for method [DecorativeField::addValidator](https://github.com/lingtalfi/Chloroform/blob/master/Field/DecorativeField.php#L82-L85)
+See the source code for method [DecorativeField::addValidator](https://github.com/lingtalfi/Chloroform/blob/master/Field/DecorativeField.php#L90-L93)
 
 
 See Also

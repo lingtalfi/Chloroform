@@ -52,7 +52,7 @@ Returns array.
 
 Source Code
 ===========
-See the source code for method [DecorativeField::getErrors](https://github.com/lingtalfi/Chloroform/blob/master/Field/DecorativeField.php#L107-L110)
+See the source code for method [DecorativeField::getErrors](https://github.com/lingtalfi/Chloroform/blob/master/Field/DecorativeField.php#L115-L118)
 
 
 See Also

@@ -43,6 +43,12 @@ class DecorativeField implements FieldInterface
     protected $decorationType;
 
     /**
+     * This property holds the decorationOptions for this instance.
+     * @var array
+     */
+    protected $decorationOptions;
+
+    /**
      * This property holds the id for this instance.
      * @var string
      */
@@ -54,7 +60,8 @@ class DecorativeField implements FieldInterface
      *
      * The properties for a decorative field are:
      *
-     * - ?type: string, the type of the decorative field (defaults to undefined)
+     * - ?deco_type: string, the type of the decorative field (defaults to undefined)
+     * - ?deco_options: array, some options for the decorative field, depends on the concrete renderer too
      * - ?id: string, the identifier of the field (its reference name when used by a chloroform instance)
      *
      *
@@ -64,6 +71,7 @@ class DecorativeField implements FieldInterface
     {
         $cpt = self::$cpt++;
         $this->decorationType = $properties['deco_type'] ?? "undefined";
+        $this->decorationOptions = $properties['deco_options'] ?? [];
         $this->id = $properties['id'] ?? StringTool::getUniqueCssId("decorative-field-$cpt-");
     }
 
@@ -148,6 +156,7 @@ class DecorativeField implements FieldInterface
             "errors" => [],
             "className" => get_called_class(),
             "deco_type" => $this->getDecorationType(),
+            "deco_options" => $this->getDecorationOptions(),
         ];
     }
 
@@ -180,4 +189,13 @@ class DecorativeField implements FieldInterface
         return $this->decorationType;
     }
 
+    /**
+     * Returns the decorationOptions of this instance.
+     *
+     * @return array
+     */
+    public function getDecorationOptions(): array
+    {
+        return $this->decorationOptions;
+    }
 }

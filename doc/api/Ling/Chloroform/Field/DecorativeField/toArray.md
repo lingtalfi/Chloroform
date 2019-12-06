@@ -59,7 +59,7 @@ Returns array.
 
 Source Code
 ===========
-See the source code for method [DecorativeField::toArray](https://github.com/lingtalfi/Chloroform/blob/master/Field/DecorativeField.php#L139-L152)
+See the source code for method [DecorativeField::toArray](https://github.com/lingtalfi/Chloroform/blob/master/Field/DecorativeField.php#L147-L161)
 
 
 See Also
