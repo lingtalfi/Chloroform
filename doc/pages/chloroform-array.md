@@ -43,5 +43,7 @@ It has the following structure:
         - not_set (default value)
         You can set the mode (and I recommend it) to insert/update to help some field renderers to do their job.
         Or don't use it and use your own heuristics...
+- jsCode: string=null. Some js code to add to handle the form. I first created it to implement a multiple edit system.
+               The js code will be included inside some <script> tags provided by the renderer.        
 
 ```

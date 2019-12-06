@@ -756,6 +756,10 @@ Here is a list of known chloroform renderers:
 History Log
 =============
 
+- 1.24.1 -- 2019-12-06
+
+    - update chloroform array documentation 
+    
 - 1.24.0 -- 2019-12-06
 
     - add Chloroform.jsCode property 
