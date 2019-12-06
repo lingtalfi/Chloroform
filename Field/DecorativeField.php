@@ -16,7 +16,7 @@ use Ling\Chloroform\Validator\ValidatorInterface;
  * Rather than creating one class per type of decorative element, this class can represent
  * any type of decorative element.
  *
- * This is done via the type property of this class.
+ * This is done via the deco_type property of this class.
  *
  *
  * We recommend the following types, however you are free to create your owns:
@@ -37,10 +37,10 @@ class DecorativeField implements FieldInterface
 
 
     /**
-     * This property holds the type for this instance.
+     * This property holds the decoration type for this instance.
      * @var string
      */
-    protected $type;
+    protected $decorationType;
 
     /**
      * This property holds the id for this instance.
@@ -63,7 +63,7 @@ class DecorativeField implements FieldInterface
     public function __construct(array $properties = [])
     {
         $cpt = self::$cpt++;
-        $this->type = $properties['type'] ?? "undefined";
+        $this->decorationType = $properties['deco_type'] ?? "undefined";
         $this->id = $properties['id'] ?? StringTool::getUniqueCssId("decorative-field-$cpt-");
     }
 
@@ -147,7 +147,7 @@ class DecorativeField implements FieldInterface
             "htmlName" => "",
             "errors" => [],
             "className" => get_called_class(),
-            "type" => $this->getType(),
+            "deco_type" => $this->getDecorationType(),
         ];
     }
 
@@ -175,9 +175,9 @@ class DecorativeField implements FieldInterface
      *
      * @return string
      */
-    public function getType(): string
+    public function getDecorationType(): string
     {
-        return $this->type;
+        return $this->decorationType;
     }
 
 }

@@ -20,7 +20,7 @@ The idea of this class is to encode for any type of decorative element of the fo
 Rather than creating one class per type of decorative element, this class can represent
 any type of decorative element.
 
-This is done via the type property of this class.
+This is done via the deco_type property of this class.
 
 
 We recommend the following types, however you are free to create your owns:
@@ -37,7 +37,7 @@ class <span class="pl-k">DecorativeField</span> implements [FieldInterface](http
 
 - Properties
     - private static int [$cpt](#property-cpt) = 1 ;
-    - protected string [$type](#property-type) ;
+    - protected string [$decorationType](#property-decorationType) ;
     - protected string [$id](#property-id) ;
 
 - Methods
@@ -53,7 +53,7 @@ class <span class="pl-k">DecorativeField</span> implements [FieldInterface](http
     - public [toArray](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/DecorativeField/toArray.md)() : array
     - public [hasVeryImportantData](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/DecorativeField/hasVeryImportantData.md)() : bool
     - public [getDataTransformer](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/DecorativeField/getDataTransformer.md)() : [DataTransformerInterface](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/DataTransformer/DataTransformerInterface.md) | null
-    - public [getType](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/DecorativeField/getType.md)() : string
+    - public [getDecorationType](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/DecorativeField/getDecorationType.md)() : string
 
 }
 
@@ -69,9 +69,9 @@ Properties
     
     
 
-- <span id="property-type"><b>type</b></span>
+- <span id="property-decorationType"><b>decorationType</b></span>
 
-    This property holds the type for this instance.
+    This property holds the decoration type for this instance.
     
     
 
@@ -98,7 +98,7 @@ Methods
 - [DecorativeField::toArray](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/DecorativeField/toArray.md) &ndash; Returns the array representation of the field.
 - [DecorativeField::hasVeryImportantData](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/DecorativeField/hasVeryImportantData.md) &ndash; Returns whether this field contains [very important data](https://github.com/lingtalfi/Chloroform/blob/master/doc/pages/chloroform-discussion.md#the-concept-of-very-important-data).
 - [DecorativeField::getDataTransformer](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/DecorativeField/getDataTransformer.md) &ndash; Returns the data transformer of this field if any, or null otherwise.
-- [DecorativeField::getType](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/DecorativeField/getType.md) &ndash; Returns the type of this instance.
+- [DecorativeField::getDecorationType](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/DecorativeField/getDecorationType.md) &ndash; Returns the type of this instance.
 
 
 
