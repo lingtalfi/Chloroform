@@ -133,7 +133,7 @@ array(1) {
 }
 
 // a($formArray)
-array(7) {
+array(8) {
   ["isPosted"] => bool(true)
   ["notifications"] => array(1) {
     [0] => array(2) {
@@ -175,6 +175,7 @@ array(7) {
   }
   ["mode"] => string(7) "not_set"
   ["jsCode"] => NULL
+  ["cssId"] => NULL
 }
 
 
@@ -239,7 +240,7 @@ a($formArray);
 The toArray method will output something like this (after submitting the form without typing anything):
 
 ```html
-array(7) {
+array(8) {
   ["isPosted"] => bool(false)
   ["notifications"] => array(1) {
     [0] => array(2) {
@@ -268,6 +269,7 @@ array(7) {
   }
   ["mode"] => string(7) "not_set"
   ["jsCode"] => NULL
+  ["cssId"] => NULL
 }
 
 ```
@@ -336,7 +338,7 @@ a($formArray);
 The toArray method will output something like this (after submitting the form without typing anything):
 
 ```html
-array(7) {
+array(8) {
   ["isPosted"] => bool(false)
   ["notifications"] => array(1) {
     [0] => array(2) {
@@ -372,6 +374,7 @@ array(7) {
   }
   ["mode"] => string(7) "not_set"
   ["jsCode"] => NULL
+  ["cssId"] => NULL
 }
 
 ```
@@ -433,7 +436,7 @@ The toArray method will output something like this (after submitting the form wi
 
 
 ```html
-array(7) {
+array(8) {
   ["isPosted"] => bool(false)
   ["notifications"] => array(1) {
     [0] => array(2) {
@@ -488,6 +491,7 @@ array(7) {
   }
   ["mode"] => string(7) "not_set"
   ["jsCode"] => NULL
+  ["cssId"] => NULL
 }
 
 
@@ -552,7 +556,7 @@ The toArray method will output something like this (after submitting the form wi
 
 ```html
 
-array(7) {
+array(8) {
   ["isPosted"] => bool(false)
   ["notifications"] => array(1) {
     [0] => array(2) {
@@ -598,6 +602,7 @@ array(7) {
   }
   ["mode"] => string(7) "not_set"
   ["jsCode"] => NULL
+  ["cssId"] => NULL
 }
 
 ```
@@ -637,7 +642,7 @@ the resulting chloroform array will look like this:
 
 
 ```html 
-array(7) {
+array(8) {
   ["isPosted"] => bool(true)
   ["notifications"] => array(1) {
     [0] => array(2) {
@@ -671,6 +676,7 @@ array(7) {
   }
   ["mode"] => string(7) "not_set"
   ["jsCode"] => NULL
+  ["cssId"] => NULL
 }
 
 ```
@@ -756,6 +762,10 @@ Here is a list of known chloroform renderers:
 History Log
 =============
 
+- 1.25.0 -- 2019-12-06
+
+    - add Chloroform.cssId property 
+    
 - 1.24.1 -- 2019-12-06
 
     - update chloroform array documentation 

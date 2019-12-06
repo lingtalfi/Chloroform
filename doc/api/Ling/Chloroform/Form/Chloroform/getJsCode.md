@@ -46,7 +46,7 @@ Returns string.
 
 Source Code
 ===========
-See the source code for method [Chloroform::getJsCode](https://github.com/lingtalfi/Chloroform/blob/master/Form/Chloroform.php#L394-L397)
+See the source code for method [Chloroform::getJsCode](https://github.com/lingtalfi/Chloroform/blob/master/Form/Chloroform.php#L411-L414)
 
 
 See Also
@@ -54,5 +54,5 @@ See Also
 
 The [Chloroform](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Form/Chloroform.md) class.
 
-Previous method: [getProperty](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Form/Chloroform/getProperty.md)<br>Next method: [toArray](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Form/Chloroform/toArray.md)<br>
+Previous method: [getProperty](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Form/Chloroform/getProperty.md)<br>Next method: [getCssId](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Form/Chloroform/getCssId.md)<br>
 

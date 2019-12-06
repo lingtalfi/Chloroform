@@ -83,6 +83,12 @@ class Chloroform
      */
     protected $jsCode;
 
+    /**
+     * This property holds the cssId for this instance.
+     * @var string|null
+     */
+    protected $cssId;
+
 
     /**
      * Builds the Chloroform instance.
@@ -96,6 +102,7 @@ class Chloroform
         $this->mode = 'not_set';
         $this->formId = "chloroform_one";
         $this->jsCode = null;
+        $this->cssId = null;
         $this->addField(HiddenField::create("chloroform_hidden_key", ['value' => $this->formId])->setHasVeryImportantData(false));
 
     }
@@ -359,6 +366,16 @@ class Chloroform
         $this->jsCode = $jsCode;
     }
 
+    /**
+     * Sets the cssId.
+     *
+     * @param string $cssId
+     */
+    public function setCssId(string $cssId)
+    {
+        $this->cssId = $cssId;
+    }
+
 
     /**
      * Returns whether the property identified by the given key exists.
@@ -396,28 +413,22 @@ class Chloroform
         return $this->jsCode;
     }
 
+    /**
+     * Returns the cssId of this instance.
+     * Null is returned if the form cssId was not defined.
+     *
+     * @return string|null
+     */
+    public function getCssId(): ?string
+    {
+        return $this->cssId;
+    }
+
 
     /**
      * Returns the array version (template friendly) of the form.
+     * See the @page(chloroform array page) for more details.
      *
-     * The blueprint looks like this:
-     *
-     *
-     * ```yaml
-     * isPosted: bool, whether this form instance was submitted.
-     *
-     * notifications:
-     *      -
-     *          type: string, the type of notification (success, info, warning, error)
-     *          msg: string, the message of the notification
-     * errors: a summary of the form errors (for the templates to use).
-     *          It's actually nothing more than the fields errors put altogether here.
-     *
-     * fields:
-     *      -
-     *          the array version of the field (see the @page(FieldInterface->toArray method) for more info)
-     *
-     * ```
      *
      *
      * @return array
@@ -461,6 +472,7 @@ class Chloroform
             "properties" => $this->properties,
             "mode" => $this->mode,
             "jsCode" => $this->jsCode,
+            "cssId" => $this->cssId,
         ];
     }
 

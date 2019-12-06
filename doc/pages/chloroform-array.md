@@ -45,5 +45,6 @@ It has the following structure:
         Or don't use it and use your own heuristics...
 - jsCode: string=null. Some js code to add to handle the form. I first created it to implement a multiple edit system.
                The js code will be included inside some <script> tags provided by the renderer.        
+- cssId: string=null. The css id of the form, if set. Null is returned by default or if the cssId was not set.
 
 ```
