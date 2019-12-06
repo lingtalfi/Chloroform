@@ -695,6 +695,7 @@ The available fields
 - AjaxFileBoxField: is generally represented by an html input tag of type file with a drop zone. It's coupled with a third-party javascript client and a backend service to provide the desired functionality of 
         uploading the files via ajax.
 - PasswordField: is generally represented by an html input tag of type password.
+- DecorativeField: used to represent any kind of decorative elements in the form
 
 
 
@@ -749,6 +750,10 @@ Here is a list of known chloroform renderers:
 History Log
 =============
 
+- 1.23.0 -- 2019-12-06
+
+    - add DecorativeField class 
+    
 - 1.22.0 -- 2019-12-05
 
     - add Chloroform getMode method 

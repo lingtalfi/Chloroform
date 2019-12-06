@@ -1,6 +1,6 @@
 Ling/Chloroform
 ================
-2019-04-10 --> 2019-12-05
+2019-04-10 --> 2019-12-06
 
 
 
@@ -157,6 +157,21 @@ Table of contents
     - [AbstractField::setHint](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/AbstractField/setHint.md) &ndash; Sets the hint.
     - [AbstractField::setErrorName](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/AbstractField/setErrorName.md) &ndash; Sets the errorName.
     - [AbstractField::setHasVeryImportantData](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/AbstractField/setHasVeryImportantData.md) &ndash; Sets whether this field has [very important data](https://github.com/lingtalfi/Chloroform/blob/master/doc/pages/chloroform-discussion.md#the-concept-of-very-important-data).
+- [DecorativeField](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/DecorativeField.md) &ndash; The DecorativeField class.
+    - [DecorativeField::__construct](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/DecorativeField/__construct.md) &ndash; Builds the DecorativeField instance.
+    - [DecorativeField::getId](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/DecorativeField/getId.md) &ndash; Returns the field id.
+    - [DecorativeField::addValidator](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/DecorativeField/addValidator.md) &ndash; Adds a validator to this instance.
+    - [DecorativeField::setDataTransformer](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/DecorativeField/setDataTransformer.md) &ndash; Sets the dataTransformer for this field.
+    - [DecorativeField::validates](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/DecorativeField/validates.md) &ndash; Tests and returns whether every validator attached to this instanced passed.
+    - [DecorativeField::getErrors](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/DecorativeField/getErrors.md) &ndash; Returns an array of error messages.
+    - [DecorativeField::setValue](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/DecorativeField/setValue.md) &ndash; Sets the value for this instance.
+    - [DecorativeField::getValue](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/DecorativeField/getValue.md) &ndash; Returns the value of the field.
+    - [DecorativeField::getFallbackValue](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/DecorativeField/getFallbackValue.md) &ndash; Returns the fallback value, which defaults to null.
+    - [DecorativeField::toArray](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/DecorativeField/toArray.md) &ndash; Returns the array representation of the field.
+    - [DecorativeField::hasVeryImportantData](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/DecorativeField/hasVeryImportantData.md) &ndash; Returns whether this field contains [very important data](https://github.com/lingtalfi/Chloroform/blob/master/doc/pages/chloroform-discussion.md#the-concept-of-very-important-data).
+    - [DecorativeField::getDataTransformer](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/DecorativeField/getDataTransformer.md) &ndash; Returns the data transformer of this field if any, or null otherwise.
+    - [DecorativeField::getType](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/DecorativeField/getType.md) &ndash; Returns the type of this instance.
+    - [DecorativeField::setType](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/DecorativeField/setType.md) &ndash; Sets the type.
 - [FieldInterface](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/FieldInterface.md) &ndash; The FieldInterface interface.
     - [FieldInterface::getId](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/FieldInterface/getId.md) &ndash; Returns the field id.
     - [FieldInterface::addValidator](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/FieldInterface/addValidator.md) &ndash; Adds a validator to this instance.
