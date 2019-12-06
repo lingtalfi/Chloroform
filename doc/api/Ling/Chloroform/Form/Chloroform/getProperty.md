@@ -53,7 +53,7 @@ Returns mixed.
 
 Source Code
 ===========
-See the source code for method [Chloroform::getProperty](https://github.com/lingtalfi/Chloroform/blob/master/Form/Chloroform.php#L365-L371)
+See the source code for method [Chloroform::getProperty](https://github.com/lingtalfi/Chloroform/blob/master/Form/Chloroform.php#L381-L387)
 
 
 See Also
@@ -61,5 +61,5 @@ See Also
 
 The [Chloroform](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Form/Chloroform.md) class.
 
-Previous method: [hasProperty](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Form/Chloroform/hasProperty.md)<br>Next method: [toArray](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Form/Chloroform/toArray.md)<br>
+Previous method: [hasProperty](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Form/Chloroform/hasProperty.md)<br>Next method: [getJsCode](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Form/Chloroform/getJsCode.md)<br>
 

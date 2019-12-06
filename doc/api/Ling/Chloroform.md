@@ -387,8 +387,10 @@ Table of contents
     - [Chloroform::getNotifications](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Form/Chloroform/getNotifications.md) &ndash; Returns the notifications of this instance.
     - [Chloroform::setProperty](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Form/Chloroform/setProperty.md) &ndash; Sets a property.
     - [Chloroform::setMode](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Form/Chloroform/setMode.md) &ndash; Sets the mode.
+    - [Chloroform::setJsCode](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Form/Chloroform/setJsCode.md) &ndash; Sets the jsCode.
     - [Chloroform::hasProperty](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Form/Chloroform/hasProperty.md) &ndash; Returns whether the property identified by the given key exists.
     - [Chloroform::getProperty](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Form/Chloroform/getProperty.md) &ndash; Returns the value of the property identified by the given key, or the default value otherwise.
+    - [Chloroform::getJsCode](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Form/Chloroform/getJsCode.md) &ndash; Returns the jsCode of this instance.
     - [Chloroform::toArray](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Form/Chloroform/toArray.md) &ndash; Returns the array version (template friendly) of the form.
 - [ErrorFormNotification](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/FormNotification/ErrorFormNotification.md) &ndash; The ErrorFormNotification class.
     - [ErrorFormNotification::create](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/FormNotification/ErrorFormNotification/create.md) &ndash; Builds and returns the instance.

@@ -49,7 +49,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [Chloroform::setMode](https://github.com/lingtalfi/Chloroform/blob/master/Form/Chloroform.php#L341-L344)
+See the source code for method [Chloroform::setMode](https://github.com/lingtalfi/Chloroform/blob/master/Form/Chloroform.php#L347-L350)
 
 
 See Also
@@ -57,5 +57,5 @@ See Also
 
 The [Chloroform](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Form/Chloroform.md) class.
 
-Previous method: [setProperty](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Form/Chloroform/setProperty.md)<br>Next method: [hasProperty](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Form/Chloroform/hasProperty.md)<br>
+Previous method: [setProperty](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Form/Chloroform/setProperty.md)<br>Next method: [setJsCode](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Form/Chloroform/setJsCode.md)<br>
 

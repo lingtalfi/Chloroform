@@ -54,7 +54,7 @@ Exceptions thrown
 
 Source Code
 ===========
-See the source code for method [Chloroform::getPostedData](https://github.com/lingtalfi/Chloroform/blob/master/Form/Chloroform.php#L134-L144)
+See the source code for method [Chloroform::getPostedData](https://github.com/lingtalfi/Chloroform/blob/master/Form/Chloroform.php#L141-L151)
 
 
 See Also

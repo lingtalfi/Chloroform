@@ -57,7 +57,7 @@ Exceptions thrown
 
 Source Code
 ===========
-See the source code for method [Chloroform::validates](https://github.com/lingtalfi/Chloroform/blob/master/Form/Chloroform.php#L160-L182)
+See the source code for method [Chloroform::validates](https://github.com/lingtalfi/Chloroform/blob/master/Form/Chloroform.php#L167-L189)
 
 
 See Also

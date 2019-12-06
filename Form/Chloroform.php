@@ -77,6 +77,12 @@ class Chloroform
      */
     protected $mode;
 
+    /**
+     * This property holds the jsCode for this instance.
+     * @var string|null
+     */
+    protected $jsCode;
+
 
     /**
      * Builds the Chloroform instance.
@@ -89,6 +95,7 @@ class Chloroform
         $this->_postedData = null;
         $this->mode = 'not_set';
         $this->formId = "chloroform_one";
+        $this->jsCode = null;
         $this->addField(HiddenField::create("chloroform_hidden_key", ['value' => $this->formId])->setHasVeryImportantData(false));
 
     }
@@ -258,7 +265,6 @@ class Chloroform
     }
 
 
-
     /**
      * Inject the given values in the corresponding fields.
      * This method is typically used in an update form, to have the first instantiation of your form filled
@@ -343,6 +349,16 @@ class Chloroform
         $this->mode = $mode;
     }
 
+    /**
+     * Sets the jsCode.
+     *
+     * @param string $jsCode
+     */
+    public function setJsCode(string $jsCode)
+    {
+        $this->jsCode = $jsCode;
+    }
+
 
     /**
      * Returns whether the property identified by the given key exists.
@@ -368,6 +384,16 @@ class Chloroform
             return $this->properties[$key];
         }
         return $default;
+    }
+
+    /**
+     * Returns the jsCode of this instance.
+     *
+     * @return string
+     */
+    public function getJsCode(): string
+    {
+        return $this->jsCode;
     }
 
 
@@ -434,6 +460,7 @@ class Chloroform
             "errors" => $errors,
             "properties" => $this->properties,
             "mode" => $this->mode,
+            "jsCode" => $this->jsCode,
         ];
     }
 

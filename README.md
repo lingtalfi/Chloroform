@@ -133,7 +133,7 @@ array(1) {
 }
 
 // a($formArray)
-array(6) {
+array(7) {
   ["isPosted"] => bool(true)
   ["notifications"] => array(1) {
     [0] => array(2) {
@@ -174,6 +174,7 @@ array(6) {
   ["properties"] => array(0) {
   }
   ["mode"] => string(7) "not_set"
+  ["jsCode"] => NULL
 }
 
 
@@ -238,7 +239,7 @@ a($formArray);
 The toArray method will output something like this (after submitting the form without typing anything):
 
 ```html
-array(6) {
+array(7) {
   ["isPosted"] => bool(false)
   ["notifications"] => array(1) {
     [0] => array(2) {
@@ -266,6 +267,7 @@ array(6) {
   ["properties"] => array(0) {
   }
   ["mode"] => string(7) "not_set"
+  ["jsCode"] => NULL
 }
 
 ```
@@ -334,7 +336,7 @@ a($formArray);
 The toArray method will output something like this (after submitting the form without typing anything):
 
 ```html
-array(6) {
+array(7) {
   ["isPosted"] => bool(false)
   ["notifications"] => array(1) {
     [0] => array(2) {
@@ -369,6 +371,7 @@ array(6) {
   ["properties"] => array(0) {
   }
   ["mode"] => string(7) "not_set"
+  ["jsCode"] => NULL
 }
 
 ```
@@ -430,7 +433,7 @@ The toArray method will output something like this (after submitting the form wi
 
 
 ```html
-array(6) {
+array(7) {
   ["isPosted"] => bool(false)
   ["notifications"] => array(1) {
     [0] => array(2) {
@@ -484,6 +487,7 @@ array(6) {
   ["properties"] => array(0) {
   }
   ["mode"] => string(7) "not_set"
+  ["jsCode"] => NULL
 }
 
 
@@ -548,7 +552,7 @@ The toArray method will output something like this (after submitting the form wi
 
 ```html
 
-array(6) {
+array(7) {
   ["isPosted"] => bool(false)
   ["notifications"] => array(1) {
     [0] => array(2) {
@@ -593,6 +597,7 @@ array(6) {
   ["properties"] => array(0) {
   }
   ["mode"] => string(7) "not_set"
+  ["jsCode"] => NULL
 }
 
 ```
@@ -632,7 +637,7 @@ the resulting chloroform array will look like this:
 
 
 ```html 
-array(6) {
+array(7) {
   ["isPosted"] => bool(true)
   ["notifications"] => array(1) {
     [0] => array(2) {
@@ -665,6 +670,7 @@ array(6) {
   ["properties"] => array(0) {
   }
   ["mode"] => string(7) "not_set"
+  ["jsCode"] => NULL
 }
 
 ```
@@ -750,6 +756,10 @@ Here is a list of known chloroform renderers:
 History Log
 =============
 
+- 1.24.0 -- 2019-12-06
+
+    - add Chloroform.jsCode property 
+    
 - 1.23.3 -- 2019-12-06
 
     - add DecorativeField.$decorationOptions 
