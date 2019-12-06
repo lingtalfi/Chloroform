@@ -46,7 +46,7 @@ Returns mixed.
 
 Source Code
 ===========
-See the source code for method [DecorativeField::getValue](https://github.com/lingtalfi/Chloroform/blob/master/Field/DecorativeField.php#L109-L112)
+See the source code for method [DecorativeField::getValue](https://github.com/lingtalfi/Chloroform/blob/master/Field/DecorativeField.php#L123-L126)
 
 
 See Also

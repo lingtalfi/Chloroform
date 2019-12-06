@@ -52,7 +52,7 @@ Returns bool.
 
 Source Code
 ===========
-See the source code for method [DecorativeField::validates](https://github.com/lingtalfi/Chloroform/blob/master/Field/DecorativeField.php#L85-L88)
+See the source code for method [DecorativeField::validates](https://github.com/lingtalfi/Chloroform/blob/master/Field/DecorativeField.php#L99-L102)
 
 
 See Also

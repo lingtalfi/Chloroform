@@ -17,7 +17,6 @@ use Ling\Chloroform\Validator\ValidatorInterface;
  * any type of decorative element.
  *
  * This is done via the type property of this class.
- * Use the setType and getType methods to set/get the type.
  *
  *
  * We recommend the following types, however you are free to create your owns:
@@ -43,13 +42,29 @@ class DecorativeField implements FieldInterface
      */
     protected $type;
 
+    /**
+     * This property holds the id for this instance.
+     * @var string
+     */
+    protected $id;
+
 
     /**
      * Builds the DecorativeField instance.
+     *
+     * The properties for a decorative field are:
+     *
+     * - ?type: string, the type of the decorative field (defaults to undefined)
+     * - ?id: string, the identifier of the field (its reference name when used by a chloroform instance)
+     *
+     *
+     * @param array $properties
      */
-    public function __construct()
+    public function __construct(array $properties = [])
     {
-        $this->type = "not_defined";
+        $cpt = self::$cpt++;
+        $this->type = $properties['type'] ?? "undefined";
+        $this->id = $properties['id'] ?? StringTool::getUniqueCssId("decorative-field-$cpt-");
     }
 
 
@@ -58,8 +73,7 @@ class DecorativeField implements FieldInterface
      */
     public function getId()
     {
-        $cpt = self::$cpt++;
-        return StringTool::getUniqueCssId("decorative-field-$cpt-");
+        return $this->id;
     }
 
     /**
@@ -124,7 +138,17 @@ class DecorativeField implements FieldInterface
      */
     public function toArray(): array
     {
-        return [];
+        return [
+            "id" => $this->getId(),
+            "label" => null,
+            "hint" => null,
+            "errorName" => "",
+            "value" => "",
+            "htmlName" => "",
+            "errors" => [],
+            "className" => get_called_class(),
+            "type" => $this->getType(),
+        ];
     }
 
     /**
@@ -155,16 +179,5 @@ class DecorativeField implements FieldInterface
     {
         return $this->type;
     }
-
-    /**
-     * Sets the type.
-     *
-     * @param string $type
-     */
-    public function setType(string $type)
-    {
-        $this->type = $type;
-    }
-
 
 }

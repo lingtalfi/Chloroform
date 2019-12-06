@@ -29,6 +29,9 @@ It has the following structure:
                     - className: string           # the name of the field class (this is addressed to renderers, so that they know how to render the field)
                     - ...other properties might be added, depending on your field
 
+                    
+
+
 - errors: array. A summary of the form errors (for the templates to use).
                 It's actually nothing more than the fields errors put altogether here.
 

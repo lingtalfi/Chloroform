@@ -750,6 +750,10 @@ Here is a list of known chloroform renderers:
 History Log
 =============
 
+- 1.23.1 -- 2019-12-06
+
+    - fix DecorativeField->toArray not returning a compliant array of properties 
+
 - 1.23.0 -- 2019-12-06
 
     - add DecorativeField class 

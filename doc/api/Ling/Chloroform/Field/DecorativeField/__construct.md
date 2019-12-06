@@ -16,12 +16,17 @@ Description
 ================
 
 
-public [DecorativeField::__construct](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/DecorativeField/__construct.md)() : void
+public [DecorativeField::__construct](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/DecorativeField/__construct.md)(?array $properties = []) : void
 
 
 
 
 Builds the DecorativeField instance.
+
+The properties for a decorative field are:
+
+- ?type: string, the type of the decorative field (defaults to undefined)
+- ?id: string, the identifier of the field (its reference name when used by a chloroform instance)
 
 
 
@@ -29,7 +34,10 @@ Builds the DecorativeField instance.
 Parameters
 ================
 
-This method has no parameters.
+
+- properties
+
+    
 
 
 Return values
@@ -46,7 +54,7 @@ Returns void.
 
 Source Code
 ===========
-See the source code for method [DecorativeField::__construct](https://github.com/lingtalfi/Chloroform/blob/master/Field/DecorativeField.php#L50-L53)
+See the source code for method [DecorativeField::__construct](https://github.com/lingtalfi/Chloroform/blob/master/Field/DecorativeField.php#L63-L68)
 
 
 See Also

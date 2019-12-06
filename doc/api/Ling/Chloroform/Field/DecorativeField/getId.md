@@ -47,7 +47,7 @@ Returns string.
 
 Source Code
 ===========
-See the source code for method [DecorativeField::getId](https://github.com/lingtalfi/Chloroform/blob/master/Field/DecorativeField.php#L59-L63)
+See the source code for method [DecorativeField::getId](https://github.com/lingtalfi/Chloroform/blob/master/Field/DecorativeField.php#L74-L77)
 
 
 See Also
