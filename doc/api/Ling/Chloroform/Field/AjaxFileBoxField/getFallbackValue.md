@@ -47,7 +47,7 @@ Returns mixed.
 
 Source Code
 ===========
-See the source code for method [AjaxFileBoxField::getFallbackValue](https://github.com/lingtalfi/Chloroform/blob/master/Field/AjaxFileBoxField.php#L100-L106)
+See the source code for method [AjaxFileBoxField::getFallbackValue](https://github.com/lingtalfi/Chloroform/blob/master/Field/AjaxFileBoxField.php#L59-L65)
 
 
 See Also

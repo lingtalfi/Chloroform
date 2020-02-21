@@ -1,6 +1,6 @@
 Chloroform
 ===========
-2019-04-12
+2019-04-12 -> 2020-02-21
 
 
 
@@ -761,6 +761,10 @@ Here is a list of known chloroform renderers:
 
 History Log
 =============
+
+- 1.26.0 -- 2020-02-21
+
+    - update AjaxFileBoxField, now only provide the maxFile property. 
 
 - 1.25.0 -- 2019-12-06
 
