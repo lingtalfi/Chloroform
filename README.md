@@ -762,6 +762,10 @@ Here is a list of known chloroform renderers:
 History Log
 =============
 
+- 1.28.0 -- 2020-03-18
+
+    - add FieldInterface->setProperty method 
+    
 - 1.27.0 -- 2020-03-18
 
     - add FieldInterface->setProperties method 

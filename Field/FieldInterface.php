@@ -140,4 +140,15 @@ interface FieldInterface
      * @return void
      */
     public function setProperties(array $properties);
+
+    /**
+     * Sets a property to this field.
+     * Note: each concrete class might respond differently to the properties being set.
+     *
+     *
+     * @param string $name
+     * @param $value
+     * @return void
+     */
+    public function setProperty(string $name, $value);
 }
