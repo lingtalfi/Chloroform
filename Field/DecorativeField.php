@@ -176,6 +176,17 @@ class DecorativeField implements FieldInterface
         return null;
     }
 
+
+    /**
+     * @implementation
+     */
+    public function setProperties(array $properties)
+    {
+        return null;
+    }
+
+
+
     //--------------------------------------------
     //
     //--------------------------------------------
