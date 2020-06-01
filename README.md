@@ -762,6 +762,10 @@ Here is a list of known chloroform renderers:
 History Log
 =============
 
+- 1.30.0 -- 2020-06-01
+
+    - update Chloroform->getPostedData now doesn't filter out empty files (undo previous step)
+    
 - 1.29.0 -- 2020-06-01
 
     - update Chloroform->getPostedData now filters out empty files

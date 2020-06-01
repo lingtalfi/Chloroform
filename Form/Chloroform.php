@@ -152,15 +152,7 @@ class Chloroform
         }
 
         if (null === $this->_postedData) {
-
-            $phpFiles = PhpUploadFileFixTool::fixPhpFiles($_FILES, true);
-            $phpFiles = array_filter($phpFiles, function ($item) {
-                if (\UPLOAD_ERR_NO_FILE === $item['error']) {
-                    return false;
-                }
-                return true;
-            });
-            $this->_postedData = array_merge($_POST, $phpFiles);
+            $this->_postedData = array_merge($_POST, PhpUploadFileFixTool::fixPhpFiles($_FILES, true));
         }
         return $this->_postedData;
     }

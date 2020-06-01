@@ -100,11 +100,10 @@ The posted data
 
 When a form is posted, an array of key/value pairs is created representing the form data.
 
-In Chloroform, this array contains a merge of the $_POST and the flattened and filtered version of the $_FILES.
+In Chloroform, this array contains a merge of the $_POST and the flattened version of the $_FILES.
 
 By flattened, I mean dot flattened using the PhpUploadFileFixTool from @page(the PhpUploadFileFix planet).
 
-By filtered, I mean any empty file (i.e. no file uploaded) is filtered out.
 
 
 The postedData is a concept used a lot in chloroform.

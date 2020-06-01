@@ -47,7 +47,7 @@ Returns array.
 
 Source Code
 ===========
-See the source code for method [Chloroform::toArray](https://github.com/lingtalfi/Chloroform/blob/master/Form/Chloroform.php#L445-L485)
+See the source code for method [Chloroform::toArray](https://github.com/lingtalfi/Chloroform/blob/master/Form/Chloroform.php#L437-L477)
 
 
 See Also
