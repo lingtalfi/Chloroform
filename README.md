@@ -1,6 +1,6 @@
 Chloroform
 ===========
-2019-04-12 -> 2020-06-01
+2019-04-12 -> 2020-08-11
 
 
 
@@ -187,6 +187,9 @@ array(8) {
 
 Example #1: the simplest form
 -----------
+2019-04-12
+
+
 
 ```php
 
@@ -277,6 +280,10 @@ array(8) {
 
 Example #2: a simple form with custom validation
 ---------
+2019-04-12
+
+
+
 
 With the following code:
 
@@ -384,6 +391,10 @@ array(8) {
 
 Example #3: a simple form with validation
 ---------
+2019-04-12
+
+
+
 
 With the following code:
 
@@ -501,6 +512,10 @@ array(8) {
 
 Example #4: Changing the validation error message
 ---------
+2019-04-12
+
+
+
 
 With the following code:
 
@@ -616,6 +631,10 @@ array(8) {
 
 Example #5: the file field
 --------------
+2019-04-12
+
+
+
 
 File fields are special in that the value returned is the php file item provided in the $_FILES super array (the one
 with the following entries: name, type, tmp_name, size and error).
@@ -690,6 +709,9 @@ array(8) {
 
 The available fields
 ===========
+2019-04-12
+
+
 
 - StringField: is generally represented by an input tag of type text.
 - TextField: is generally represented by a textarea tag.
@@ -713,24 +735,28 @@ The available fields
 
 The available validators
 ============
+2019-04-12 -> 2020-08-11
 
 - CSRFValidator: works in tandem with the CSRFField, provides csrf protection based on the [CSRFTools planet](https://github.com/lingtalfi/CSRFTools).
 - CustomValidator: to create your own validator.
-- MinMaxCharValidator: check that a field has more than, less than, or between x and y number of characters (works with StringField, TextField).
-- MinMaxNumberValidator: check that the field value is has more than, less than, or comprised between x and y (works with NumberField).
-- MinMaxDateValidator: check that the date is comprised inside some defined boundaries (works with DateField, DateTimeField, TimeField).
-- MinMaxItemValidator: check that the user chose a certain number of items (works with SelectField with multiple on, CheckboxField).
-- MinMaxFileSizeValidator: check that the file size of the posted file is within the defined boundaries (works with FileField).
-- FileMimeTypeValidator: check that the file mime type is allowed (works with FileField).
-- RequiredValidator: check that the string version of the value is not the empty string (works with all fields).
-- RequiredDateValidator: check that the date is not empty (0000-00-00 or empty string).
-- PasswordConfirmValidator: check that the password matches the value of a password confirm field (works with PasswordField).
+- IsIntegerValidator: checks that the field value is an integer.
+- IsNumberValidator: checks that the field value has a numeric form.
+- MinMaxCharValidator: checks that a field has more than, less than, or between x and y number of characters (works with StringField, TextField).
+- MinMaxNumberValidator: checks that the field value is has more than, less than, or comprised between x and y (works with NumberField).
+- MinMaxDateValidator: checks that the date is comprised inside some defined boundaries (works with DateField, DateTimeField, TimeField).
+- MinMaxItemValidator: checks that the user chose a certain number of items (works with SelectField with multiple on, CheckboxField).
+- MinMaxFileSizeValidator: checks that the file size of the posted file is within the defined boundaries (works with FileField).
+- FileMimeTypeValidator: checks that the file mime type is allowed (works with FileField).
+- RequiredValidator: checks that the string version of the value is not the empty string (works with all fields).
+- RequiredDateValidator: checks that the date is not empty (0000-00-00 or empty string).
+- PasswordConfirmValidator: checks that the password matches the value of a password confirm field (works with PasswordField).
 
 
 
 
 Rendering the form
 =============
+2019-04-12 
 
 The Chloroform planet doesn't provide Renderer classes by default.
 
@@ -762,6 +788,10 @@ Here is a list of known chloroform renderers:
 History Log
 =============
 
+- 1.31.0 -- 2020-08-11
+
+    - add IsIntegerValidator and IsNumberValidator  
+    
 - 1.30.0 -- 2020-06-01
 
     - update Chloroform->getPostedData now doesn't filter out empty files (undo previous step)

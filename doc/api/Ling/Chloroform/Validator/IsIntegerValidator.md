@@ -2,7 +2,7 @@
 
 
 
-The RequiredDateValidator class
+The IsIntegerValidator class
 ================
 2019-04-10 --> 2020-08-11
 
@@ -14,10 +14,13 @@ The RequiredDateValidator class
 Introduction
 ============
 
-The RequiredDateValidator class.
+The IsIntegerValidator class.
 
-Validates only if it's not the empty string and if the string doesn't contain the 0000-00-00 string/
-So if the value is null, the validation will fail, because it will evaluate to the empty string.
+If the value is an integer, it validates.
+
+
+
+If the value is null or a float, the validation will fail.
 
 
 
@@ -25,14 +28,14 @@ Class synopsis
 ==============
 
 
-class <span class="pl-k">RequiredDateValidator</span> extends [AbstractValidator](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/AbstractValidator.md) implements [ValidatorInterface](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/ValidatorInterface.md) {
+class <span class="pl-k">IsIntegerValidator</span> extends [AbstractValidator](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/AbstractValidator.md) implements [ValidatorInterface](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/ValidatorInterface.md) {
 
 - Inherited properties
     - protected string [AbstractValidator::$messagesDir](#property-messagesDir) ;
     - protected array [AbstractValidator::$customMessages](#property-customMessages) ;
 
 - Methods
-    - public [test](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/RequiredDateValidator/test.md)($value, string $fieldName, [Ling\Chloroform\Field\FieldInterface](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/FieldInterface.md) $field, ?string &$error = null) : bool
+    - public [test](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/IsIntegerValidator/test.md)($value, string $fieldName, [Ling\Chloroform\Field\FieldInterface](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/FieldInterface.md) $field, ?string &$error = null) : bool
 
 - Inherited methods
     - public [AbstractValidator::__construct](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/AbstractValidator/__construct.md)() : void
@@ -53,7 +56,7 @@ class <span class="pl-k">RequiredDateValidator</span> extends [AbstractValidator
 Methods
 ==============
 
-- [RequiredDateValidator::test](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/RequiredDateValidator/test.md) &ndash; of the validator.
+- [IsIntegerValidator::test](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/IsIntegerValidator/test.md) &ndash; of the validator.
 - [AbstractValidator::__construct](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/AbstractValidator/__construct.md) &ndash; Builds the AbstractValidator instance.
 - [AbstractValidator::create](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/AbstractValidator/create.md) &ndash; Builds and returns the instance for this class.
 - [AbstractValidator::toArray](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/AbstractValidator/toArray.md) &ndash; Returns the array version of a validator.
@@ -68,11 +71,11 @@ Methods
 
 Location
 =============
-Ling\Chloroform\Validator\RequiredDateValidator<br>
-See the source code of [Ling\Chloroform\Validator\RequiredDateValidator](https://github.com/lingtalfi/Chloroform/blob/master/Validator/RequiredDateValidator.php)
+Ling\Chloroform\Validator\IsIntegerValidator<br>
+See the source code of [Ling\Chloroform\Validator\IsIntegerValidator](https://github.com/lingtalfi/Chloroform/blob/master/Validator/IsIntegerValidator.php)
 
 
 
 SeeAlso
 ==============
-Previous class: [PasswordValidator](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/PasswordValidator.md)<br>Next class: [RequiredValidator](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/RequiredValidator.md)<br>
+Previous class: [FileMimeTypeValidator](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/FileMimeTypeValidator.md)<br>Next class: [IsNumberValidator](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/IsNumberValidator.md)<br>
