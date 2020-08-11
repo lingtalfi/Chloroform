@@ -77,7 +77,7 @@ Returns bool.
 
 Source Code
 ===========
-See the source code for method [IsMysqlDatetimeValidator::test](https://github.com/lingtalfi/Chloroform/blob/master/Validator/IsMysqlDatetimeValidator.php#L43-L64)
+See the source code for method [IsMysqlDatetimeValidator::test](https://github.com/lingtalfi/Chloroform/blob/master/Validator/IsMysqlDatetimeValidator.php#L54-L75)
 
 
 See Also
@@ -85,5 +85,5 @@ See Also
 
 The [IsMysqlDatetimeValidator](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/IsMysqlDatetimeValidator.md) class.
 
-Previous method: [__construct](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/IsMysqlDatetimeValidator/__construct.md)<br>Next method: [toArray](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/IsMysqlDatetimeValidator/toArray.md)<br>
+Previous method: [setAcceptEmpty](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/IsMysqlDatetimeValidator/setAcceptEmpty.md)<br>Next method: [toArray](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/IsMysqlDatetimeValidator/toArray.md)<br>
 

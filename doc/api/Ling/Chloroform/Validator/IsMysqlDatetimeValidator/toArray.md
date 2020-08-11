@@ -54,7 +54,7 @@ Returns array.
 
 Source Code
 ===========
-See the source code for method [IsMysqlDatetimeValidator::toArray](https://github.com/lingtalfi/Chloroform/blob/master/Validator/IsMysqlDatetimeValidator.php#L71-L76)
+See the source code for method [IsMysqlDatetimeValidator::toArray](https://github.com/lingtalfi/Chloroform/blob/master/Validator/IsMysqlDatetimeValidator.php#L82-L87)
 
 
 See Also

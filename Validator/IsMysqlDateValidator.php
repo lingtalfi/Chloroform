@@ -36,6 +36,18 @@ class IsMysqlDateValidator extends AbstractValidator
         $this->acceptEmpty = false;
     }
 
+    /**
+     * Sets the acceptEmpty.
+     *
+     * @param bool $acceptEmpty
+     */
+    public function setAcceptEmpty(bool $acceptEmpty)
+    {
+        $this->acceptEmpty = $acceptEmpty;
+    }
+
+
+
 
     /**
      * @implementation

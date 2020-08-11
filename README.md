@@ -790,6 +790,10 @@ Here is a list of known chloroform renderers:
 History Log
 =============
 
+- 1.33.1 -- 2020-08-11
+
+    - fix IsMysqlDateValidator and IsMysqlDatetimeValidator not having the setAcceptEmpty method   
+
 - 1.33.0 -- 2020-08-11
 
     - add IsMysqlDateValidator and IsMysqlDatetimeValidator   

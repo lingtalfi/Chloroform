@@ -38,6 +38,17 @@ class IsMysqlDatetimeValidator extends AbstractValidator
 
 
     /**
+     * Sets the acceptEmpty.
+     *
+     * @param bool $acceptEmpty
+     */
+    public function setAcceptEmpty(bool $acceptEmpty)
+    {
+        $this->acceptEmpty = $acceptEmpty;
+    }
+
+
+    /**
      * @implementation
      */
     public function test($value, string $fieldName, FieldInterface $field, string &$error = null): bool
