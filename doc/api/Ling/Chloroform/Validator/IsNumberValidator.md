@@ -79,4 +79,4 @@ See the source code of [Ling\Chloroform\Validator\IsNumberValidator](https://git
 
 SeeAlso
 ==============
-Previous class: [IsIntegerValidator](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/IsIntegerValidator.md)<br>Next class: [MinMaxCharValidator](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/MinMaxCharValidator.md)<br>
+Previous class: [IsMysqlDatetimeValidator](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/IsMysqlDatetimeValidator.md)<br>Next class: [MinMaxCharValidator](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/MinMaxCharValidator.md)<br>

@@ -740,6 +740,8 @@ The available validators
 - CSRFValidator: works in tandem with the CSRFField, provides csrf protection based on the [CSRFTools planet](https://github.com/lingtalfi/CSRFTools).
 - CustomValidator: to create your own validator.
 - IsIntegerValidator: checks that the field value is an integer.
+- IsMysqlDateValidator: checks that the field value has the mysql date format.
+- IsMysqlDatetimeValidator: checks that the field value has the mysql datetime format.
 - IsNumberValidator: checks that the field value has a numeric form.
 - MinMaxCharValidator: checks that a field has more than, less than, or between x and y number of characters (works with StringField, TextField).
 - MinMaxNumberValidator: checks that the field value is has more than, less than, or comprised between x and y (works with NumberField).
@@ -788,6 +790,10 @@ Here is a list of known chloroform renderers:
 History Log
 =============
 
+- 1.33.0 -- 2020-08-11
+
+    - add IsMysqlDateValidator and IsMysqlDatetimeValidator   
+    
 - 1.32.1 -- 2020-08-11
 
     - fix IsIntegerValidator not transmitting mode option when converted to array form  
