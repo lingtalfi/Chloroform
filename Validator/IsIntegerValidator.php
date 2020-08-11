@@ -4,6 +4,7 @@
 namespace Ling\Chloroform\Validator;
 
 
+use Ling\Chloroform\Exception\ChloroformException;
 use Ling\Chloroform\Field\FieldInterface;
 
 /**
@@ -21,6 +22,48 @@ use Ling\Chloroform\Field\FieldInterface;
  */
 class IsIntegerValidator extends AbstractValidator
 {
+
+    /**
+     * This property holds the mode for this instance.
+     *
+     * The mode can be one of:
+     *
+     * - default (by default)
+     * - onlyPositive
+     * - onlyNegative
+     * - positiveAndZero
+     * - negativeAndZero
+     *
+     *
+     *
+     * @var string
+     */
+    protected $mode;
+
+
+    /**
+     * @overrides
+     */
+    public function __construct()
+    {
+        parent::__construct();
+        $this->mode = 'default';
+    }
+
+
+    /**
+     * Sets the mode.
+     *
+     * @param string $mode
+     * @return $this
+     */
+    public function setMode(string $mode): self
+    {
+        $this->mode = $mode;
+        return $this;
+    }
+
+
     /**
      * @implementation
      */
@@ -33,7 +76,44 @@ class IsIntegerValidator extends AbstractValidator
                 "fieldName" => $fieldName,
             ]);
             return false;
+        } else {
+            $hasError = false;
+            switch ($this->mode) {
+                case "default":
+                    break;
+                case "onlyPositive":
+                    if ((int)$value <= 0) {
+                        $hasError = true;
+                    }
+                    break;
+                case "onlyNegative":
+                    if ((int)$value >= 0) {
+                        $hasError = true;
+                    }
+                    break;
+                case "positiveAndZero":
+                    if ((int)$value < 0) {
+                        $hasError = true;
+                    }
+                    break;
+                case "negativeAndZero":
+                    if ((int)$value > 0) {
+                        $hasError = true;
+                    }
+                    break;
+                default:
+                    throw new ChloroformException("Unknown mode: $this->mode.");
+                    break;
+            }
+
+            if (true === $hasError) {
+                $error = $this->getErrorMessage($this->mode, [
+                    "fieldName" => $fieldName,
+                ]);
+                return false;
+            }
         }
+
         return true;
     }
 }
