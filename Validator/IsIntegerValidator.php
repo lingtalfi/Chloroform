@@ -116,4 +116,17 @@ class IsIntegerValidator extends AbstractValidator
 
         return true;
     }
+
+
+
+    /**
+     * @overrides
+     */
+    public function toArray(): array
+    {
+        return array_merge(parent::toArray(), [
+            "mode" => $this->mode,
+        ]);
+    }
+
 }

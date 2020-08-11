@@ -198,6 +198,7 @@ https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Vali
 https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/IsIntegerValidator/__construct.md
 https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/IsIntegerValidator/setMode.md
 https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/IsIntegerValidator/test.md
+https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/IsIntegerValidator/toArray.md
 https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/IsIntegerValidator.md
 https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/IsNumberValidator/test.md
 https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/IsNumberValidator.md

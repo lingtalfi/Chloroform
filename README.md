@@ -788,6 +788,10 @@ Here is a list of known chloroform renderers:
 History Log
 =============
 
+- 1.32.1 -- 2020-08-11
+
+    - fix IsIntegerValidator not transmitting mode option when converted to array form  
+    
 - 1.32.0 -- 2020-08-11
 
     - update IsIntegerValidator, add mode option  
