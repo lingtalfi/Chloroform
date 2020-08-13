@@ -77,7 +77,7 @@ Returns bool.
 
 Source Code
 ===========
-See the source code for method [IsIntegerValidator::test](https://github.com/lingtalfi/Chloroform/blob/master/Validator/IsIntegerValidator.php#L70-L119)
+See the source code for method [IsIntegerValidator::test](https://github.com/lingtalfi/Chloroform/blob/master/Validator/IsIntegerValidator.php#L70-L127)
 
 
 See Also

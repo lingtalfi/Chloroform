@@ -69,9 +69,17 @@ class IsIntegerValidator extends AbstractValidator
      */
     public function test($value, string $fieldName, FieldInterface $field, string &$error = null): bool
     {
-
         if (
-            false === ctype_digit($value)
+
+            (
+                false === is_string($value) &&
+                false === is_numeric($value)
+            )
+            ||
+            (
+                is_string($value) &&
+                0 === preg_match('!^-?[0-9]+$!', $value)
+            )
         ) {
             $error = $this->getErrorMessage("main", [
                 "fieldName" => $fieldName,
@@ -117,7 +125,6 @@ class IsIntegerValidator extends AbstractValidator
 
         return true;
     }
-
 
 
     /**

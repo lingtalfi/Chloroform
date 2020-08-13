@@ -54,7 +54,7 @@ Returns array.
 
 Source Code
 ===========
-See the source code for method [IsIntegerValidator::toArray](https://github.com/lingtalfi/Chloroform/blob/master/Validator/IsIntegerValidator.php#L126-L131)
+See the source code for method [IsIntegerValidator::toArray](https://github.com/lingtalfi/Chloroform/blob/master/Validator/IsIntegerValidator.php#L133-L138)
 
 
 See Also
