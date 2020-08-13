@@ -1,6 +1,6 @@
 Ling/Chloroform
 ================
-2019-04-10 --> 2020-08-11
+2019-04-10 --> 2020-08-13
 
 
 
@@ -412,6 +412,7 @@ Table of contents
     - [Chloroform::isPosted](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Form/Chloroform/isPosted.md) &ndash; Returns whether this form instance was posted.
     - [Chloroform::getPostedData](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Form/Chloroform/getPostedData.md) &ndash; Returns an array of posted data (for this instance).
     - [Chloroform::validates](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Form/Chloroform/validates.md) &ndash; Returns whether all fields attached to this form validate.
+    - [Chloroform::getValidationErrors](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Form/Chloroform/getValidationErrors.md) &ndash; Returns the validationErrors of this instance.
     - [Chloroform::getVeryImportantData](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Form/Chloroform/getVeryImportantData.md) &ndash; Returns the [very important data](https://github.com/lingtalfi/Chloroform/blob/master/doc/pages/chloroform-discussion.md#the-concept-of-very-important-data) of a form.
     - [Chloroform::executeDataTransformers](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Form/Chloroform/executeDataTransformers.md) &ndash; Execute the data transformers (see the [DataTransformerInterface](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/DataTransformer/DataTransformerInterface.md) for more details) on the given postedData.
     - [Chloroform::getFields](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Form/Chloroform/getFields.md) &ndash; Returns the fields of this instance.

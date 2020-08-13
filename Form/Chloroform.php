@@ -89,6 +89,15 @@ class Chloroform
      */
     protected $cssId;
 
+    /**
+     * The array of fieldId => field errors.
+     * This array is only fed after a call to the "validates" method.
+     *
+     *
+     * @var array
+     */
+    protected $validationErrors;
+
 
     /**
      * Builds the Chloroform instance.
@@ -98,6 +107,7 @@ class Chloroform
         $this->fields = [];
         $this->notifications = [];
         $this->properties = [];
+        $this->validationErrors = [];
         $this->_postedData = null;
         $this->mode = 'not_set';
         $this->formId = "chloroform_one";
@@ -165,13 +175,15 @@ class Chloroform
      * By default, if no validator exists, a field validates.
      *
      *
-     * Note: the form will also inject the postedData values to the corresponding fields.
+     * Note: by default the form will also inject the postedData values to the corresponding fields,
+     * unless the injectValue flag is set to false.
      *
      *
+     * @param bool $injectValue
      * @return bool
      * @throws \Exception
      */
-    public function validates(): bool
+    public function validates(bool $injectValue = true): bool
     {
         $postedData = $this->getPostedData();
 
@@ -181,19 +193,35 @@ class Chloroform
             $value = $this->getFieldPostedValue($field, $postedData);
 
             // value injection
-            $field->setValue($value);
+            if (true === $injectValue) {
+                $field->setValue($value);
+            }
 
             if (false === $field->validates($value)) {
                 /**
                  * Note: we don't break the loop to ensure that all the fields
                  * build their error messages.
                  */
+                $this->validationErrors[$field->getId()] = $field->getErrors();
                 $validates = false;
             }
         }
 
         return $validates;
     }
+
+    /**
+     * Returns the validationErrors of this instance.
+     *
+     * @return array
+     */
+    public function getValidationErrors(): array
+    {
+        return $this->validationErrors;
+    }
+
+
+
 
 
     /**

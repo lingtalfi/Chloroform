@@ -1,6 +1,6 @@
 Chloroform
 ===========
-2019-04-12 -> 2020-08-11
+2019-04-12 -> 2020-08-13
 
 
 
@@ -790,6 +790,10 @@ Here is a list of known chloroform renderers:
 History Log
 =============
 
+- 1.34.0 -- 2020-08-13
+
+    - add Chloroform->getValidationErrors method   
+    
 - 1.33.1 -- 2020-08-11
 
     - fix IsMysqlDateValidator and IsMysqlDatetimeValidator not having the setAcceptEmpty method   
