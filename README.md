@@ -790,6 +790,10 @@ Here is a list of known chloroform renderers:
 History Log
 =============
 
+- 1.34.1 -- 2020-08-13
+
+    - fix IsIntegerValidator->test method incorrectly processing integers passed as strings
+    
 - 1.34.0 -- 2020-08-13
 
     - add Chloroform->getValidationErrors method   
