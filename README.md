@@ -1,6 +1,6 @@
 Chloroform
 ===========
-2019-04-12 -> 2020-08-13
+2019-04-12 -> 2020-09-07
 
 
 
@@ -790,6 +790,10 @@ Here is a list of known chloroform renderers:
 History Log
 =============
 
+- 1.34.3 -- 2020-09-07
+
+    - update documentation to make it clearer that the mode is optional
+    
 - 1.34.2 -- 2020-08-13
 
     - fix IsIntegerValidator->test method incorrectly handling negative numbers

@@ -1,6 +1,6 @@
 Chloroform array
 ================
-2019-10-18
+2019-10-18 -> 2020-09-07
 
 
 
@@ -37,7 +37,7 @@ It has the following structure:
 
 - properties: array. An array of custom key/value pairs for the developers to use. I originally created this to implement the  
         [iframe signal technique](https://github.com/lingtalfi/TheBar/blob/master/discussions/iframe-signal.md).
-- mode: string. One of:
+- mode: string. Optional. One of:
         - insert
         - update
         - not_set (default value)
