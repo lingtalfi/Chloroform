@@ -46,7 +46,7 @@ Returns array.
 
 Source Code
 ===========
-See the source code for method [Chloroform::getValidationErrors](https://github.com/lingtalfi/Chloroform/blob/master/Form/Chloroform.php#L218-L221)
+See the source code for method [Chloroform::getValidationErrors](https://github.com/lingtalfi/Chloroform/blob/master/Form/Chloroform.php#L228-L231)
 
 
 See Also

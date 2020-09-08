@@ -129,6 +129,16 @@ class Chloroform
         $this->getField("chloroform_hidden_key")->setValue($this->formId);
     }
 
+    /**
+     * Returns the formId of this instance.
+     *
+     * @return string
+     */
+    public function getFormId(): string
+    {
+        return $this->formId;
+    }
+
 
     /**
      * Returns whether this form instance was posted.

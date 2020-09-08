@@ -53,7 +53,7 @@ Returns mixed | null.
 
 Source Code
 ===========
-See the source code for method [Chloroform::getFieldPostedValue](https://github.com/lingtalfi/Chloroform/blob/master/Form/Chloroform.php#L519-L522)
+See the source code for method [Chloroform::getFieldPostedValue](https://github.com/lingtalfi/Chloroform/blob/master/Form/Chloroform.php#L529-L532)
 
 
 See Also
