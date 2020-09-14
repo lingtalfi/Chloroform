@@ -1,6 +1,6 @@
 Chloroform
 ===========
-2019-04-12 -> 2020-09-08
+2019-04-12 -> 2020-09-14
 
 
 
@@ -735,7 +735,7 @@ The available fields
 
 The available validators
 ============
-2019-04-12 -> 2020-08-11
+2019-04-12 -> 2020-09-14
 
 - CSRFValidator: works in tandem with the CSRFField, provides csrf protection based on the [CSRFTools planet](https://github.com/lingtalfi/CSRFTools).
 - CustomValidator: to create your own validator.
@@ -750,7 +750,8 @@ The available validators
 - MinMaxFileSizeValidator: checks that the file size of the posted file is within the defined boundaries (works with FileField).
 - FileMimeTypeValidator: checks that the file mime type is allowed (works with FileField).
 - RequiredValidator: checks that the string version of the value is not the empty string (works with all fields).
-- RequiredDateValidator: checks that the date is not empty (0000-00-00 or empty string).
+- RequiredDateValidator: checks that the date is not empty. The "0000-00-00" string is considered invalid too.
+- RequiredDatetimeValidator: checks that the date is a valid mysql datetime. The "0000-00-00 00:00:00" string is considered invalid.
 - PasswordConfirmValidator: checks that the password matches the value of a password confirm field (works with PasswordField).
 
 
@@ -790,6 +791,10 @@ Here is a list of known chloroform renderers:
 History Log
 =============
 
+- 1.35.1 -- 2020-09-14
+
+    - add RequiredDatetimeValidator class
+    
 - 1.35.0 -- 2020-09-08
 
     - add Chloroform->getFormId method

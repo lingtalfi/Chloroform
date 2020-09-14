@@ -2,7 +2,7 @@
 
 
 
-The RequiredValidator class
+The RequiredDatetimeValidator class
 ================
 2019-04-10 --> 2020-09-14
 
@@ -14,14 +14,10 @@ The RequiredValidator class
 Introduction
 ============
 
-The RequiredValidator class.
+The RequiredDatetimeValidator class.
 
-If the value is a string, it validates only if it's not the empty string.
-If the value is array-ish (an html name ending with []), it validates only if the value is not null.
-
-
-So if the value is null, the validation will fail.
-But if the value is 0, the validation will succeed.
+Validates only if it's not the empty string and if the string doesn't contain the 0000-00-00 string/
+So if the value is null, the validation will fail, because it will evaluate to the empty string.
 
 
 
@@ -29,14 +25,14 @@ Class synopsis
 ==============
 
 
-class <span class="pl-k">RequiredValidator</span> extends [AbstractValidator](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/AbstractValidator.md) implements [ValidatorInterface](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/ValidatorInterface.md) {
+class <span class="pl-k">RequiredDatetimeValidator</span> extends [AbstractValidator](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/AbstractValidator.md) implements [ValidatorInterface](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/ValidatorInterface.md) {
 
 - Inherited properties
     - protected string [AbstractValidator::$messagesDir](#property-messagesDir) ;
     - protected array [AbstractValidator::$customMessages](#property-customMessages) ;
 
 - Methods
-    - public [test](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/RequiredValidator/test.md)($value, string $fieldName, [Ling\Chloroform\Field\FieldInterface](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/FieldInterface.md) $field, ?string &$error = null) : bool
+    - public [test](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/RequiredDatetimeValidator/test.md)($value, string $fieldName, [Ling\Chloroform\Field\FieldInterface](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/FieldInterface.md) $field, ?string &$error = null) : bool
 
 - Inherited methods
     - public [AbstractValidator::__construct](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/AbstractValidator/__construct.md)() : void
@@ -57,7 +53,7 @@ class <span class="pl-k">RequiredValidator</span> extends [AbstractValidator](ht
 Methods
 ==============
 
-- [RequiredValidator::test](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/RequiredValidator/test.md) &ndash; of the validator.
+- [RequiredDatetimeValidator::test](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/RequiredDatetimeValidator/test.md) &ndash; of the validator.
 - [AbstractValidator::__construct](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/AbstractValidator/__construct.md) &ndash; Builds the AbstractValidator instance.
 - [AbstractValidator::create](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/AbstractValidator/create.md) &ndash; Builds and returns the instance for this class.
 - [AbstractValidator::toArray](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/AbstractValidator/toArray.md) &ndash; Returns the array version of a validator.
@@ -72,11 +68,11 @@ Methods
 
 Location
 =============
-Ling\Chloroform\Validator\RequiredValidator<br>
-See the source code of [Ling\Chloroform\Validator\RequiredValidator](https://github.com/lingtalfi/Chloroform/blob/master/Validator/RequiredValidator.php)
+Ling\Chloroform\Validator\RequiredDatetimeValidator<br>
+See the source code of [Ling\Chloroform\Validator\RequiredDatetimeValidator](https://github.com/lingtalfi/Chloroform/blob/master/Validator/RequiredDatetimeValidator.php)
 
 
 
 SeeAlso
 ==============
-Previous class: [RequiredDatetimeValidator](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/RequiredDatetimeValidator.md)<br>Next class: [ValidatorConfig](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/ValidatorConfig.md)<br>
+Previous class: [RequiredDateValidator](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/RequiredDateValidator.md)<br>Next class: [RequiredValidator](https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Validator/RequiredValidator.md)<br>
