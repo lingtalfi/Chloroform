@@ -791,6 +791,10 @@ Here is a list of known chloroform renderers:
 History Log
 =============
 
+- 1.36.0 -- 2020-09-14
+
+    - add formatted value concept
+    
 - 1.35.1 -- 2020-09-14
 
     - add RequiredDatetimeValidator class

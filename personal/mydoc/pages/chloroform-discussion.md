@@ -1,6 +1,6 @@
 Chloroform discussion
 ==========
-2019-04-10 -> 2020-06-01
+2019-04-10 -> 2020-09-14
 
 
 
@@ -13,6 +13,7 @@ Summary
 - [The isPosted method and form concurrency](#the-isposted-method-and-form-concurrency)
 - [The concept of very important data](#the-concept-of-very-important-data)
 - [Data transformers](#data-transformers)
+- [the getFormattedValue method](#the-getformattedvalue-method)
 - [The Chloroform synopsis](#the-chloroform-synopsis)
 
 
@@ -41,7 +42,6 @@ And finally, there are all those common validators, which have been encapsulated
 
 
 In terms of design, I will so delegate validators and error messages to the fields (i.e not at the form level).
-
 
 
 
@@ -192,6 +192,55 @@ So, data transformer is a bit special, and you might not use it yourself, unless
 
 The data transformers also don't appear in the [form array](https://github.com/lingtalfi/Chloroform/blob/master/doc/pages/chloroform-array.md),
 as it's an internal feature, and the **form array** is intended to be processed by renderers (the view side of the MVC model).
+
+
+
+
+The getFormattedValue method
+---------
+2020-09-14
+
+
+**getFormattedValue** is a method of the FieldInterface.
+
+The idea behind this is to be able to format the value of a field before it's passed for processing.
+
+
+This concept is similar to the "data transformers" (see section above), the main difference is that data-transformers need
+to be set manually, whereas the **getFormattedValue** is part of the Field's core, and thus is automatically executed.
+
+
+The **getFormattedValue**'s output is what you get when you call the form's **getVeryImportantData** method, which you should always
+call to get the real values out of your (chloro)form. By real, I mean the ones that you will actually process for your business (i.e. inserting
+in a database, sending by email, etc...).
+
+
+
+The reason we have this method is to solve the problem exposed below.
+
+Sometimes, you, as the developer, expect a control to give you back a data which can either be null or something else.
+Typically, you have a datetime field in your table, which is nullable, and so it's just natural to expect either a datetime or the null
+value from your control.
+
+From that observation, two main implementation strategies are the following:
+
+- we could change the control's form, so that the user can toggle a "is null" button 
+- we can let the field transform the value of the user if it's close enough to null (for example an empty string would be converted to null)
+
+
+As you can guess, I didn't like the first idea that much, because it puts more pressure on the user, which is always a bad thing gui wise.
+Therefore, the less evil of the two aforementioned strategies is the second one, hence the **getFormattedValue** method.
+
+This is a bit like polymorphism is to oop, where an argument can be interpreted differently based on its concrete value.
+Only this time it's the field itself which analyzes its own value and might return null (or, more generally any value it wants), or not, 
+depending on its core rules.
+  
+  
+Note: I wanted to have separated **getValue** and **getFormattedValue** methods, as the raw/current value of the Field could be used
+somehow. 
+  
+ 
+
 
 
 

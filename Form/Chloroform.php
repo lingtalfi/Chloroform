@@ -248,7 +248,7 @@ class Chloroform
         $ret = [];
         foreach ($this->fields as $id => $field) {
             if (true === $field->hasVeryImportantData()) {
-                $ret[$id] = $field->getValue();
+                $ret[$id] = $field->getFormattedValue();
             }
         }
         return $ret;

@@ -10,6 +10,7 @@ https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Fiel
 https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/AbstractField/getDataTransformer.md
 https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/AbstractField/getErrors.md
 https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/AbstractField/getFallbackValue.md
+https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/AbstractField/getFormattedValue.md
 https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/AbstractField/getId.md
 https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/AbstractField/getValue.md
 https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/AbstractField/hasVeryImportantData.md
@@ -46,9 +47,11 @@ https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Fiel
 https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/ColorField/getValue.md
 https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/ColorField.md
 https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/DateField/create.md
+https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/DateField/getFormattedValue.md
 https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/DateField/getValue.md
 https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/DateField.md
 https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/DateTimeField/create.md
+https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/DateTimeField/getFormattedValue.md
 https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/DateTimeField/getValue.md
 https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/DateTimeField.md
 https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/DecorativeField/__construct.md
@@ -58,6 +61,7 @@ https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Fiel
 https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/DecorativeField/getDecorationType.md
 https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/DecorativeField/getErrors.md
 https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/DecorativeField/getFallbackValue.md
+https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/DecorativeField/getFormattedValue.md
 https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/DecorativeField/getId.md
 https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/DecorativeField/getType.md
 https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/DecorativeField/getValue.md
@@ -74,6 +78,7 @@ https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Fiel
 https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/FieldInterface/getDataTransformer.md
 https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/FieldInterface/getErrors.md
 https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/FieldInterface/getFallbackValue.md
+https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/FieldInterface/getFormattedValue.md
 https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/FieldInterface/getId.md
 https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/FieldInterface/getValue.md
 https://github.com/lingtalfi/Chloroform/blob/master/doc/api/Ling/Chloroform/Field/FieldInterface/hasVeryImportantData.md
