@@ -1,6 +1,6 @@
 Chloroform
 ===========
-2019-04-12 -> 2020-09-14
+2019-04-12 -> 2020-09-17
 
 
 
@@ -791,6 +791,10 @@ Here is a list of known chloroform renderers:
 History Log
 =============
 
+- 1.36.1 -- 2020-09-17
+
+    - update fieldId definition
+    
 - 1.36.0 -- 2020-09-14
 
     - add formatted value concept

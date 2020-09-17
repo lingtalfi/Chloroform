@@ -1,6 +1,6 @@
 Chloroform discussion
 ==========
-2019-04-10 -> 2020-09-14
+2019-04-10 -> 2020-09-17
 
 
 
@@ -48,17 +48,22 @@ In terms of design, I will so delegate validators and error messages to the fiel
 
 The field id
 -------------
-2019-04-10
+2019-04-10 -> 2020-09-17
 
 Each field has an id. 
 An id can be translated to an html name (the html form name for the element).
 
-The field id is basically the dot version of the html name.
+The field id is the dot version of the html name.
 
 For instance if the html name is ```colors[red]```, then the id would be **colors.red**.
 
 
+This means that the fieldId is the bdot path to a concrete value in the posted array.
+  
+
 The field id is important, because it allows to target the data a field should validate against (could be an array, or a string generally).
+
+
 
 
 
