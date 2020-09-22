@@ -511,6 +511,7 @@ class Chloroform
             "mode" => $this->mode,
             "jsCode" => $this->jsCode,
             "cssId" => $this->cssId,
+            "id" => $this->formId,
         ];
     }
 

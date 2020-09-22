@@ -1,11 +1,12 @@
 Chloroform discussion
 ==========
-2019-04-10 -> 2020-09-17
+2019-04-10 -> 2020-09-22
 
 
 
 Summary
 ===========
+- [The form id](#the-form-id)
 - [The form anatomy and general behaviour](#the-form-anatomy-and-general-behaviour)
     - [The field id](#the-field-id)
     - [Formatting/transforming form values](#formattingtransforming-field-values)
@@ -15,6 +16,20 @@ Summary
 - [Data transformers](#data-transformers)
 - [the getFormattedValue method](#the-getformattedvalue-method)
 - [The Chloroform synopsis](#the-chloroform-synopsis)
+
+
+
+
+The form id
+-------------
+2020-09-22
+
+
+The form id is primarily used to know whether this form in particular (as opposed to another form on the same page) is posted.
+
+Chloroform is also aware of the [clever form initiative](https://github.com/lingtalfi/TheBar/blob/master/discussions/clever-form-initiative.md), which also uses the form id.
+
+
 
 
 The form anatomy and general behaviour

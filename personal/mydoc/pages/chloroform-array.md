@@ -46,5 +46,8 @@ It has the following structure:
 - jsCode: string=null. Some js code to add to handle the form. I first created it to implement a multiple edit system.
                The js code will be included inside some <script> tags provided by the renderer.        
 - cssId: string=null. The css id of the form, if set. Null is returned by default or if the cssId was not set.
+- id: string=chloroform_one. The id of the form. This is: 
+    - used to know which form on the page was posted (given that a page could potentially contain multiple forms) 
+    - defined by the [clever form initiative](https://github.com/lingtalfi/TheBar/blob/master/discussions/clever-form-initiative.md), which chloroform is designed to work with
 
 ```

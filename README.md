@@ -1,6 +1,6 @@
 Chloroform
 ===========
-2019-04-12 -> 2020-09-17
+2019-04-12 -> 2020-09-22
 
 
 
@@ -50,9 +50,11 @@ How to use
 
 
 
+
+
 Latest example
 --------------
-2019-10-22
+2019-10-22 -> 2020-09-22
 
 
 This is how you should use the chloroform.
@@ -127,19 +129,9 @@ If I post the form above (without filling anything), I obtain the following:
 
 
 ```html 
-// a($data)
-array(1) {
-  ["first_name"] => string(0) ""
-}
-
-// a($formArray)
-array(8) {
-  ["isPosted"] => bool(true)
-  ["notifications"] => array(1) {
-    [0] => array(2) {
-      ["type"] => string(7) "success"
-      ["message"] => string(2) "ok"
-    }
+array(9) {
+  ["isPosted"] => bool(false)
+  ["notifications"] => array(0) {
   }
   ["fields"] => array(2) {
     ["chloroform_hidden_key"] => array(9) {
@@ -176,10 +168,13 @@ array(8) {
   ["mode"] => string(7) "not_set"
   ["jsCode"] => NULL
   ["cssId"] => NULL
+  ["id"] => string(14) "chloroform_one"
 }
 
 
 ```
+
+See more details in the [chloroform-array](https://github.com/lingtalfi/Chloroform/blob/master/doc/pages/chloroform-array.md) document.
 
 
 
@@ -187,7 +182,7 @@ array(8) {
 
 Example #1: the simplest form
 -----------
-2019-04-12
+2019-04-12 -> 2020-09-22
 
 
 
@@ -240,47 +235,13 @@ a($formArray);
 ```
 
 
-The toArray method will output something like this (after submitting the form without typing anything):
+The formArray variable will contain the [chloroform-array](https://github.com/lingtalfi/Chloroform/blob/master/doc/pages/chloroform-array.md).
 
-```html
-array(8) {
-  ["isPosted"] => bool(false)
-  ["notifications"] => array(1) {
-    [0] => array(2) {
-      ["type"] => string(7) "success"
-      ["message"] => string(2) "ok"
-    }
-  }
-  ["fields"] => array(1) {
-    ["first_name"] => array(9) {
-      ["label"] => string(10) "First name"
-      ["id"] => string(10) "first_name"
-      ["hint"] => NULL
-      ["errorName"] => string(10) "first name"
-      ["value"] => string(0) ""
-      ["htmlName"] => string(10) "first_name"
-      ["errors"] => array(0) {
-      }
-      ["className"] => string(33) "Ling\Chloroform\Field\StringField"
-      ["validators"] => array(0) {
-      }
-    }
-  }
-  ["errors"] => array(0) {
-  }
-  ["properties"] => array(0) {
-  }
-  ["mode"] => string(7) "not_set"
-  ["jsCode"] => NULL
-  ["cssId"] => NULL
-}
-
-```
 
 
 Example #2: a simple form with custom validation
 ---------
-2019-04-12
+2019-04-12 -> 2020-09-22
 
 
 
@@ -341,57 +302,13 @@ a($formArray);
 
 
 
-
-The toArray method will output something like this (after submitting the form without typing anything):
-
-```html
-array(8) {
-  ["isPosted"] => bool(false)
-  ["notifications"] => array(1) {
-    [0] => array(2) {
-      ["type"] => string(5) "error"
-      ["message"] => string(20) "There was a problem."
-    }
-  }
-  ["fields"] => array(1) {
-    ["first_name"] => array(9) {
-      ["label"] => string(10) "First name"
-      ["id"] => string(10) "first_name"
-      ["hint"] => NULL
-      ["errorName"] => string(10) "first name"
-      ["value"] => string(0) ""
-      ["htmlName"] => string(10) "first_name"
-      ["errors"] => array(1) {
-        [0] => string(14) "Nul, t'es nul!"
-      }
-      ["className"] => string(33) "Ling\Chloroform\Field\StringField"
-      ["validators"] => array(1) {
-        [0] => array(1) {
-          ["name"] => string(41) "Ling\Chloroform\Validator\CustomValidator"
-        }
-      }
-    }
-  }
-  ["errors"] => array(1) {
-    ["first_name"] => array(1) {
-      [0] => string(14) "Nul, t'es nul!"
-    }
-  }
-  ["properties"] => array(0) {
-  }
-  ["mode"] => string(7) "not_set"
-  ["jsCode"] => NULL
-  ["cssId"] => NULL
-}
-
-```
-
+The formArray variable will contain the [chloroform-array](https://github.com/lingtalfi/Chloroform/blob/master/doc/pages/chloroform-array.md).
 
 
 
 Example #3: a simple form with validation
 ---------
-2019-04-12
+2019-04-12 -> 2020-09-22
 
 
 
@@ -443,76 +360,12 @@ a($formArray);
 
 ```
 
-The toArray method will output something like this (after submitting the form without typing anything):
-
-
-```html
-array(8) {
-  ["isPosted"] => bool(false)
-  ["notifications"] => array(1) {
-    [0] => array(2) {
-      ["type"] => string(5) "error"
-      ["message"] => string(20) "There was a problem."
-    }
-  }
-  ["fields"] => array(1) {
-    ["first_name"] => array(9) {
-      ["label"] => string(10) "First name"
-      ["id"] => string(10) "first_name"
-      ["hint"] => NULL
-      ["errorName"] => string(10) "first name"
-      ["value"] => string(0) ""
-      ["htmlName"] => string(10) "first_name"
-      ["errors"] => array(2) {
-        [0] => string(26) "The first name is required"
-        [1] => string(64) "The first name must contain at least 3 chars (you wrote 0 chars)"
-      }
-      ["className"] => string(33) "Ling\Chloroform\Field\StringField"
-      ["validators"] => array(2) {
-        [0] => array(3) {
-          ["name"] => string(43) "Ling\Chloroform\Validator\RequiredValidator"
-          ["custom_messages"] => array(0) {
-          }
-          ["messages"] => array(1) {
-            [0] => string(33) "main: The {fieldName} is required"
-          }
-        }
-        [1] => array(5) {
-          ["name"] => string(45) "Ling\Chloroform\Validator\MinMaxCharValidator"
-          ["custom_messages"] => array(0) {
-          }
-          ["messages"] => array(3) {
-            [0] => string(81) "min: The {fieldName} must contain at least {min} chars (you wrote {number} chars)"
-            [1] => string(80) "max: The {fieldName} must contain at most {max} chars (you wrote {number} chars)"
-            [2] => string(109) "between: The {fieldName} must contain at least {min} chars and at most {max} chars (you wrote {number} chars)"
-          }
-          ["min"] => int(3)
-          ["max"] => NULL
-        }
-      }
-    }
-  }
-  ["errors"] => array(1) {
-    ["first_name"] => array(2) {
-      [0] => string(26) "The first name is required"
-      [1] => string(64) "The first name must contain at least 3 chars (you wrote 0 chars)"
-    }
-  }
-  ["properties"] => array(0) {
-  }
-  ["mode"] => string(7) "not_set"
-  ["jsCode"] => NULL
-  ["cssId"] => NULL
-}
-
-
-
-```
+The formArray variable will contain the [chloroform-array](https://github.com/lingtalfi/Chloroform/blob/master/doc/pages/chloroform-array.md).
 
 
 Example #4: Changing the validation error message
 ---------
-2019-04-12
+2019-04-12 -> 2020-09-22
 
 
 
@@ -566,62 +419,7 @@ a($formArray);
 ```
 
 
-The toArray method will output something like this (after submitting the form without typing anything):
-
-
-```html
-
-array(8) {
-  ["isPosted"] => bool(false)
-  ["notifications"] => array(1) {
-    [0] => array(2) {
-      ["type"] => string(5) "error"
-      ["message"] => string(20) "There was a problem."
-    }
-  }
-  ["fields"] => array(1) {
-    ["first_name"] => array(9) {
-      ["label"] => string(10) "First name"
-      ["id"] => string(10) "first_name"
-      ["hint"] => NULL
-      ["errorName"] => string(10) "first name"
-      ["value"] => string(0) ""
-      ["htmlName"] => string(10) "first_name"
-      ["errors"] => array(1) {
-        [0] => string(48) "Yo, the first name must contain at least 3 chars"
-      }
-      ["className"] => string(33) "Ling\Chloroform\Field\StringField"
-      ["validators"] => array(1) {
-        [0] => array(5) {
-          ["name"] => string(45) "Ling\Chloroform\Validator\MinMaxCharValidator"
-          ["custom_messages"] => array(1) {
-            ["min"] => string(53) "Yo, the {fieldName} must contain at least {min} chars"
-          }
-          ["messages"] => array(3) {
-            [0] => string(81) "min: The {fieldName} must contain at least {min} chars (you wrote {number} chars)"
-            [1] => string(80) "max: The {fieldName} must contain at most {max} chars (you wrote {number} chars)"
-            [2] => string(109) "between: The {fieldName} must contain at least {min} chars and at most {max} chars (you wrote {number} chars)"
-          }
-          ["min"] => int(3)
-          ["max"] => NULL
-        }
-      }
-    }
-  }
-  ["errors"] => array(1) {
-    ["first_name"] => array(1) {
-      [0] => string(48) "Yo, the first name must contain at least 3 chars"
-    }
-  }
-  ["properties"] => array(0) {
-  }
-  ["mode"] => string(7) "not_set"
-  ["jsCode"] => NULL
-  ["cssId"] => NULL
-}
-
-```
-
+The formArray variable will contain the [chloroform-array](https://github.com/lingtalfi/Chloroform/blob/master/doc/pages/chloroform-array.md).
 
 
 
@@ -631,7 +429,7 @@ array(8) {
 
 Example #5: the file field
 --------------
-2019-04-12
+2019-04-12 -> 2020-09-22
 
 
 
@@ -660,47 +458,7 @@ Once the form is submitted (provided that you used the enctype=multipart/form-da
 the resulting chloroform array will look like this:
 
 
-```html 
-array(8) {
-  ["isPosted"] => bool(true)
-  ["notifications"] => array(1) {
-    [0] => array(2) {
-      ["type"] => string(7) "success"
-      ["message"] => string(2) "ok"
-    }
-  }
-  ["fields"] => array(1) {
-    ["avatar_url"] => array(9) {
-      ["value"] => array(5) {
-        ["name"] => string(0) ""
-        ["type"] => string(0) ""
-        ["tmp_name"] => string(0) ""
-        ["error"] => int(4)
-        ["size"] => int(0)
-      }
-      ["label"] => string(10) "Avatar url"
-      ["id"] => string(10) "avatar_url"
-      ["hint"] => NULL
-      ["errorName"] => string(10) "avatar url"
-      ["htmlName"] => string(10) "avatar_url"
-      ["errors"] => array(0) {
-      }
-      ["className"] => string(31) "Ling\Chloroform\Field\FileField"
-      ["validators"] => array(0) {
-      }
-    }
-  ["errors"] => array(0) {
-  }
-  ["properties"] => array(0) {
-  }
-  ["mode"] => string(7) "not_set"
-  ["jsCode"] => NULL
-  ["cssId"] => NULL
-}
-
-```
-
-
+The formArray variable will contain the [chloroform-array](https://github.com/lingtalfi/Chloroform/blob/master/doc/pages/chloroform-array.md).
 
 
 
@@ -791,6 +549,10 @@ Here is a list of known chloroform renderers:
 History Log
 =============
 
+- 1.36.2 -- 2020-09-22
+
+    - chloroform is now redesigned to work with the clever form initiative
+    
 - 1.36.1 -- 2020-09-17
 
     - update fieldId definition
