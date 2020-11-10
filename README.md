@@ -1,6 +1,6 @@
 Chloroform
 ===========
-2019-04-12 -> 2020-09-22
+2019-04-12 -> 2020-11-10
 
 
 
@@ -87,8 +87,6 @@ if (true === $form->isPosted()) {
         // eventually add a valid notification when you think it's ok
         $form->addNotification(SuccessFormNotification::create("ok"));
 
-        // get the data in its final form
-        $form->executeDataTransformers($data);
 
 
         // now do something with $data (i.e. update database, send email, ...)
@@ -549,6 +547,10 @@ Here is a list of known chloroform renderers:
 History Log
 =============
 
+- 1.36.3 -- 2020-11-10
+
+    - update api, the concept of data transformer is now deprecated 
+    
 - 1.36.2 -- 2020-09-22
 
     - chloroform is now redesigned to work with the clever form initiative

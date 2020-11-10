@@ -251,25 +251,29 @@ class Chloroform
                 $ret[$id] = $field->getFormattedValue();
             }
         }
+
+
+        // deprecated?
+//        $this->executeDataTransformers($ret);
         return $ret;
     }
 
 
-    /**
-     * Execute the data transformers (see the @page(DataTransformerInterface) for more details) on the given postedData.
-     *
-     * @param array $postedData
-     */
-    public function executeDataTransformers(array &$postedData)
-    {
-        foreach ($this->fields as $id => $field) {
-            if (null !== ($transformer = $field->getDataTransformer())) {
-                $value = BDotTool::getDotValue($id, $postedData);
-                $transformer->transform($value, $postedData, $field);
-                BDotTool::setDotValue($id, $value, $postedData);
-            }
-        }
-    }
+//    /**
+//     * Execute the data transformers (see the @page(DataTransformerInterface) for more details) on the given postedData.
+//     *
+//     * @param array $postedData
+//     */
+//    public function executeDataTransformers(array &$postedData)
+//    {
+//        foreach ($this->fields as $id => $field) {
+//            if (null !== ($transformer = $field->getDataTransformer())) {
+//                $value = BDotTool::getDotValue($id, $postedData);
+//                $transformer->transform($value, $postedData, $field);
+//                BDotTool::setDotValue($id, $value, $postedData);
+//            }
+//        }
+//    }
 
     /**
      * Returns the fields of this instance.

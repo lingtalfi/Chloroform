@@ -1,6 +1,6 @@
 Chloroform discussion
 ==========
-2019-04-10 -> 2020-09-22
+2019-04-10 -> 2020-11-10
 
 
 
@@ -13,9 +13,14 @@ Summary
 - [The posted data](#the-posted-data)
 - [The isPosted method and form concurrency](#the-isposted-method-and-form-concurrency)
 - [The concept of very important data](#the-concept-of-very-important-data)
-- [Data transformers](#data-transformers)
 - [the getFormattedValue method](#the-getformattedvalue-method)
 - [The Chloroform synopsis](#the-chloroform-synopsis)
+- [Data transformers](#data-transformers)
+
+
+
+
+
 
 
 
@@ -186,34 +191,6 @@ because I'm not sure that would be a good idea, maybe it's just some parasite in
 
 
 
-Data transformers
-===============
-2019-10-22
-
-
-I created the concept of data transformers based on one use case only, and so here is how it works:
-
-so the form has been posted, validated, and now you've got your very important data, you're about to do something with them.
-
-But the very important data, they don't have their final form yet.
-
-So you apply the data transformers, and now you use the very important data as you like (i.e. updating the database, sending an email, ...).
-
-
-So what's the use case for data transformer?
-
-It's about a form with an ajax file upload field, and we use the [2svp idea](https://github.com/lingtalfi/TheBar/blob/master/discussions/ajax-file-upload.md#2-steps-validation-process),
-so basically the very important data contains the name of the temporary file (i.e. with the 2svp extension), but before we can use this data, we need to have the final file (i.e. remove
-the 2svp extension). So that's why the data transformer concept was originally created for: to give me a hook allowing for removing this temporary file extension in a programmatic way (because
-I intend to generate forms later, and so I need the DataTransformer phase to be handled automatically on the generated forms).
-
-So, data transformer is a bit special, and you might not use it yourself, unless you use ajax file uploads with 2svp, but it's there.
-
-
-The data transformers also don't appear in the [form array](https://github.com/lingtalfi/Chloroform/blob/master/doc/pages/chloroform-array.md),
-as it's an internal feature, and the **form array** is intended to be processed by renderers (the view side of the MVC model).
-
-
 
 
 The getFormattedValue method
@@ -361,7 +338,36 @@ Note that the validates method also injects the postedData values.
 
 
 
+ 
+
+
+Data transformers
+===============
+2019-10-22 -> 2020-11-10
+
+Warning: This is now deprecated, since the use case is not used anymore.
 
 
 
+I created the concept of data transformers based on one use case only, and so here is how it works:
+
+so the form has been posted, validated, and now you've got your very important data, you're about to do something with them.
+
+But the very important data, they don't have their final form yet.
+
+So you apply the data transformers, and now you use the very important data as you like (i.e. updating the database, sending an email, ...).
+
+
+So what's the use case for data transformer?
+
+It's about a form with an ajax file upload field, and we use the [2svp idea](https://github.com/lingtalfi/TheBar/blob/master/discussions/ajax-file-upload.md#2-steps-validation-process),
+so basically the very important data contains the name of the temporary file (i.e. with the 2svp extension), but before we can use this data, we need to have the final file (i.e. remove
+the 2svp extension). So that's why the data transformer concept was originally created for: to give me a hook allowing for removing this temporary file extension in a programmatic way (because
+I intend to generate forms later, and so I need the DataTransformer phase to be handled automatically on the generated forms).
+
+So, data transformer is a bit special, and you might not use it yourself, unless you use ajax file uploads with 2svp, but it's there.
+
+
+The data transformers also don't appear in the [form array](https://github.com/lingtalfi/Chloroform/blob/master/doc/pages/chloroform-array.md),
+as it's an internal feature, and the **form array** is intended to be processed by renderers (the view side of the MVC model).
 
