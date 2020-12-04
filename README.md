@@ -547,6 +547,10 @@ Here is a list of known chloroform renderers:
 History Log
 =============
 
+- 1.36.5 -- 2020-12-04
+
+    - Add lpi-deps.byml file
+
 - 1.36.4 -- 2020-12-01
 
     - update CheckboxField, now accepts bool property 
