@@ -547,6 +547,10 @@ Here is a list of known chloroform renderers:
 History Log
 =============
 
+- 1.36.6 -- 2020-12-08
+
+    - Fix lpi-deps not using natsort.
+
 - 1.36.5 -- 2020-12-04
 
     - Add lpi-deps.byml file
